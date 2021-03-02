@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/8891cc98ec.js"></script>
+    <link href="https://use.fontawesome.com/8891cc98ec.css" media="all" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-toggleable-md navbar-light fixed-top fixed-scroll">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-brand-wrap h-100 d-flex justify-content-center">
+                <a class=" text-accent align-self-center" href="{{$template}}/index.php"><img
+                        src='{{$template}}/img/yami/img/logo.png'></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto d-flex justify-content-end ">
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{$template}}/kor/company.php">병원소개</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{$template}}/kor/service.php">진료안내</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{$template}}/kor/work.php ">산모와출산</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ml-auto d-flex justify-content-start ">
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{$template}}/kor/contact.php ">여성진료/수술</a>
+                    </li>
+                    <li class="nav-item dropdown pr-0">
+                        <a class="nav-link dropdown-toggle" id="language" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" href="#">병원소식</a>
+                        <div class="dropdown-menu dropdown language " aria-labelledby="language">
+                            <a class="dropdown-item" href="{{$template}}/kor/news.php ">공지사항</a>
+                            <a class="dropdown-item" href="{{$template}}/kor/customer03.php">Q & A</a>
+
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown pr-0">
+                        <a class="nav-link dropdown-toggle" id="language" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" href="#">가족병원</a>
+                        <div class="dropdown-menu dropdown language " aria-labelledby="language">
+                            <a class="dropdown-item" href="http://jangshospital-mom.co.kr">장스산부인과</a>
+                            <a class="dropdown-item" href="http://jangshospital-baby.co.kr">장스소아청소년과</a>
+                            <a class="dropdown-item" href="http://jangshospital-family.co.kr">장스내과</a>
+                            <a class="dropdown-item" href="http://jangs365.com">구리 장스365</a>
+                            <a class="dropdown-item" href="http://okman97252.cafe24.com/bizdemo58308/index.php">아이맘s
+                                산후조리원</a>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-------------------
+  Intro 
+  ------------------->
+    <div class="hero-wrap w-100 img-bg-center height-intro"
+        style="background-image:url('{{$template}}/img/yami/img/main-bg-1.jpg');">
+        <div class="hero-caption">
+            <div class="hero-text text-light text-intro">
+                <h2></h2>
+            </div>
+        </div>
+    </div>
+    <main class="main-item-wrap" style="margin-top:-100px;">
+        <div class="container pt-30">
+            <!-------------------
+       1 ) 
+     ------------------->
+            <div class="row mb-30 no-gutters">
+                <div class="col-lg-6 height-xl bg-white">
+                    <!--Carousel Wrapper-->
+                    <div id="owl-text" class="owl-carousel owl-theme owl-arrows owl-dots-inner h-100">
+                        <div class="item">
+                            <div class="hero-wrap img-bg-center height-xl">
+                                <div class="hero-caption pt-50 ">
+                                    <div class="hero-text text-left align-start">
+                                        <h3 class="mb-50 display-3"> 30년을 이어온<br class="hidden-md-down">생명탄생의 가치</h3>
+                                        <p>30년 전에 장스에서 태어난 아이가 엄마가 되어, 다시 장스에서 귀엽고 소중한 아기를 낳았습니다. 언제나 생명의 가치를 최우선으로
+                                            생각하겠습니다.</p>
+                                        <a class="mb-0 text-eng btn-underline" href="{{$template}}/kor/company.php">more
+                                            about</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ item end -->
+
+                        <div class="item">
+                            <div class="hero-wrap img-bg-center height-xl">
+                                <div class="hero-caption">
+                                    <div class="hero-text text-left align-start text-inner">
+                                        <h3 class="mb-50 display-2 text-uppercase text-eng fw-600">
+                                            Get ready for<br class="hidden-md-down">365 days</h3>
+                                        <p>
+                                            삶이 팍팍해지고 우리 주변의 사정들이 어려워 졌지만, 장스는 30년 전에도 그랬듯이 분만과 출산의 응급상황에서 어떠한 예외도 두지
+                                            않겠습니다.<br>휴일없이 진료하고 매일 늦게 까지 병원문을 열어 놓겠습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ item end -->
+                    </div>
+                    <!--/.Carousel Wrapper-->
+                </div>
+                <!-- right -->
+                <div class="col-lg-6">
+                    <div class="row no-gutters">
+                        <div class="col-sm-6">
+                            <div class="hero-wrap img-bg-center  img-bg-soft dark-bg height-sm"
+                                style="background-image:url('{{$template}}/img/yami/img/main-owl-7.png')">
+                                <div class="hero-caption">
+                                    <div class="hero-text  text-light">
+                                        <a href=http://jangshospital-mom.co.kr class="d-block">
+                                            <h3 class="main-banner-title">
+                                                장스산부인과
+                                            </h3>
+                                            <p class="mb-0 text-uppercase text-eng fw-400">
+                                                ob-gyn</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="hero-wrap img-bg-center height-sm bg-accent">
+                                <div class="hero-caption">
+                                    <div class="hero-text text-light dark">
+                                        <a href=http://jangshospital-baby.co.kr class="d-block">
+                                            <h3 class=" main-banner-title">
+                                                장스<br>소아청소년과
+                                            </h3>
+                                            <p class="mb-0 text-uppercase text-eng fw-400">
+                                                Pediatrics</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 bg-gray">
+                            <div class="hero-wrap img-bg-center height-sm bg-dark">
+                                <div class="hero-caption">
+                                    <div class="hero-text text-light">
+                                        <a href=http://jangshospital-family.co.kr class="d-block">
+                                            <h3 class="main-banner-title">
+                                                장스내과 </h3>
+                                            <p class="mb-0 text-uppercase text-eng fw-400">
+                                                internal medicine</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="hero-wrap img-bg-center img-bg-soft light-bg height-sm"
+                                style="background-image:url('{{$template}}/img/yami/img/main-owl-6.png')">
+                                <div class="hero-caption">
+                                    <div class="hero-text text-dark">
+                                        <a href=http://jangs365.com class="d-block">
+                                            <h3 class="main-banner-title">
+                                                구리 장스365 </h3>
+                                            <p class="mb-0 text-uppercase text-eng fw-400">
+                                                Jangs-365</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- / right end -->
+            </div>
+
+
+            <!-------------------
+       2 ) 
+     ------------------->
+            <div class="row mb-30  bg-white no-gutters">
+                <div class="col-md-12">
+                    <!--Carousel Wrapper-->
+                    <div id="owl-content" class="owl-carousel owl-theme owl-arrows-center owl-dots-inner owl-dots-left">
+                        <div class="item">
+                            <div class=" col-lg-6 hero-wrap img-bg-center  height-lg owl-content-img"
+                                style="background-image:url('{{$template}}/img/yami/img/main-owl-1.png')"></div>
+                            <div class="col-lg-6 bg-white height-lg owl-content-text">
+                                <div class="hero-caption">
+                                    <div class="hero-text">
+                                        <p class="mb-50 textn-eng fw-600">01</p>
+                                        <h3 class="text-uppercase text-eng fw-800 mb-50 text-accent display-3">
+                                            선생님 진료일정</h3>
+                                        <a href=https://blog.naver.com/blicboss/221482554534 class="btn-underline"
+                                            target="_blank">more view</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class=" col-lg-6 hero-wrap img-bg-center  height-lg owl-content-img"
+                                style="background-image:url('{{$template}}/img/yami/img/main-owl-3.png')"></div>
+                            <div class="col-lg-6 bg-white height-lg  owl-content-text">
+                                <div class="hero-caption">
+                                    <div class="hero-text">
+                                        <p class="mb-50 textn-eng fw-600">02</p>
+                                        <h3 class="text-uppercase text-eng fw-800 mb-50 text-accent display-3">
+                                            산모와출산</h3>
+                                        <a href="{{$template}}/kor/work.php" class="btn-underline" target="_blank">more
+                                            view</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class=" col-lg-6 hero-wrap img-bg-center  height-lg owl-content-img"
+                                style="background-image:url('{{$template}}/img/yami/img/main-owl-2.png')"></div>
+                            <div class="col-lg-6 bg-white height-lg  owl-content-text">
+                                <div class="hero-caption">
+                                    <div class="hero-text">
+                                        <p class="mb-50 textn-eng fw-600">03</p>
+                                        <h3 class="text-uppercase text-eng fw-800 mb-50 text-accent display-3">
+                                            여성질환</h3>
+                                        <a href="{{$template}}/kor/contact.php" class="btn-underline"
+                                            target="_blank">more view</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.Carousel Wrapper-->
+                </div>
+            </div>
+
+            <!-------------------
+       3 ) 
+     ------------------->
+            <div class="row mb-30 no-gutters">
+                <div class="col-lg-3  col-md-6 bg-accent">
+                    <div class="hero-wrap img-bg-center img-bg-softer tint-bg height-md"
+                        style="background-image:url('{{$template}}/img/yami/img/main-add.png')">
+                        <div class="hero-caption">
+                            <div class="hero-text text-light">
+                                <h3 class="text-eng main-banner-title">
+                                    Hours
+                                </h3>
+                                <p>평일 : 09:00 - 18:00<br>
+                                    토요일, 공휴일 : 09:00 - 17:00<br>
+                                    일요일 진료 : 09:00 - 13:00<br>
+                                    점심 시간 : 13:00 - 14:00<br>
+                                    ※ 공휴일 정상진료(구정·추석당일 제외)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3  push-lg-6 col-md-6">
+                    <div class="hero-wrap height-md bg-white">
+                        <div class="hero-caption">
+                            <div class="hero-text text-left">
+                                <ul class="contact-info text-eng">
+                                    <li><span><a href="tel:024904000"><i class="axi axi-phone2"></i></span>02-490-4000
+                                    </li></a>
+                                    <li><span><i class="axi axi-map"></i></span>서울특별시 중랑구 망우로 411</li>
+                                    <li><span><i class="axi axi-access-time"></i></span>
+                                        <font color=c13981>365일 진료 / 평일야간진료</font>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pull-lg-3 col-md-12">
+                    <div id="map" class="height-md"></div>
+                </div>
+            </div>
+
+            <!-------------------
+       5 ) 
+     ------------------->
+            <div class="row mb-30 no-gutters">
+                <div class="col-md-12 bg-white ">
+                    <div class="hero-wrap img-bg-center height-md"
+                        style="background-image:url('{{$template}}/img/yami/img/main-04.png')">
+                        <div class="hero-caption">
+                            <div class="hero-text text-dark">
+                                <h3 class="sr-only">video play</h3>
+                                <a href="#" data-toggle="modal" data-target="#company-video">
+                                    <i class="axi axi-play-circle h1 text-accent"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-------------------
+       4 ) 
+     ------------------->
+            <div class="row mb-30  no-gutters main-sns">
+                <div class="col-6 col-md-3  "><a href=https://blog.naver.com/blicboss target="_blank"><img
+                            src='{{$template}}/img/yami/img/b1.png' width="100%"></a></div>
+                <div class="col-6 col-md-3  "><a href="http://okman97252.cafe24.com/bizdemo58308/index.php"
+                        target="_blank"><img src='{{$template}}/img/yami/img/b2.png' width="100%"></a></div>
+                <div class="col-6 col-md-3 push-md-3  "><a href=http://www.evermedi.com:2121/evermedi_info.do
+                        target="_blank"><img src='{{$template}}/img/yami/img/b3.png' width="100%"></a></div>
+                <div class="col-6 col-md-3  pull-md-3 "><a href=http://www.bebesonic.com/ target="_blank"><img
+                            src='{{$template}}/img/yami/img/b4.png' width="100%"></a></div>
+            </div>
+        </div>
+        </div>
+
+
+        </div>
+    </main>
+
+
+
+
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=638cad0902b4a89f19de00060c183774&libraries=services"></script>
+
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = {
+                center: new daum.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+        // 지도를 생성합니다    
+        var map = new daum.maps.Map(mapContainer, mapOption);
+        // 주소-좌표 변환 객체를 생성합니다
+        var geocoder = new daum.maps.services.Geocoder();
+        // 주소로 좌표를 검색합니다
+        geocoder.addressSearch('서울특별시 중랑구 망우로 411', function (result, status) {
+            // 정상적으로 검색이 완료됐으면 
+            if (status === daum.maps.services.Status.OK) {
+                var coords = new daum.maps.LatLng(result[0].y, result[0].x);
+                // 결과값으로 받은 위치를 마커로 표시합니다
+                var marker = new daum.maps.Marker({
+                    map: map,
+                    position: coords
+                });
+                // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                map.setCenter(coords);
+            }
+        });    
+    </script>
+
+
+    <script src="index.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
