@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="img/css/fontello.css">
+    <title>한국소비자원시대</title>
+    <style>
+        @charset "utf-8";
+
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'S-CoreDream-3Light';
+            font-size: 16px;
+            line-height: 1.25;
+            color: #333333;
+        }
+
+        header {
+            width: 100%;
+            height: 90px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.089);
+            position: relative;
+        }
+
+        .inner_header .util ul {
+            width: 218px;
+            height: 100%;
+            float: left;
+            line-height: 90px;
+            margin-left: 2%;
+        }
+
+        .inner_header .util ul li {
+            float: left;
+            padding: 0 15px;
+        }
+
+        .inner_header .logo {
+
+            line-height: 120px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .inner_header .logo a {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .related {
+            width: 270px;
+            float: right;
+        }
+
+        .related a {
+            display: block;
+            float: left;
+            margin-top: 23px;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+        }
+
+        /* section */
+        .main {
+            width: 100%;
+            height: auto;
+            background-image: url(img/01.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .main .inner {
+            width: 85%;
+            height: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .main .inner .main_title {
+            width: 50%;
+            height: auto;
+        }
+
+        .main .inner .main_title h2 {
+            position: absolute;
+            top: 35%;
+            left: 0;
+            font-size: 50px;
+            line-height: 1.3;
+            color: #222;
+            margin-bottom: 30px;
+            animation-name: titani;
+            animation-duration: 1s;
+        }
+
+        @keyframes titani {
+            0% {
+                opacity: 0;
+                top: 0;
+            }
+
+            30% {
+                opacity: 0;
+                top: 0;
+            }
+
+            100% {
+                opacity: 1;
+                top: 30;
+            }
+        }
+
+        .main .inner .main_title p {
+            font-size: 19px;
+            line-height: 1.6;
+            margin-bottom: 50px;
+            position: absolute;
+            left: 0;
+            top: 47%;
+            animation-name: titani-p;
+            animation-duration: 0.5s;
+        }
+
+        @keyframes titani-p {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            30% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+
+        .main .inner .main_title .btn {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 7px 25px;
+            font-size: 18px;
+            color: #fff;
+            position: absolute;
+            left: 0;
+            top: 63%;
+            animation-name: titani-btn;
+            animation-duration: 0.5s;
+        }
+
+        @keyframes titani-btn {
+            0% {
+                opacity: 0;
+                top: 70%;
+            }
+
+            30% {
+                opacity: 0;
+                top: 70%;
+            }
+
+            100% {
+                opacity: 1;
+                top: 63%;
+            }
+        }
+
+        .may {
+            position: absolute;
+            width: 185px;
+            height: 300px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 300px;
+            background: royalblue;
+        }
+
+        .may>a {
+            width: 145px;
+            height: 145px;
+            display: block;
+            background: slateblue;
+            border-radius: 50%;
+            text-align: center;
+            margin-bottom: 30px;
+            animation-name: may-ani;
+            animation-duration: 0.5s;
+        }
+
+        @keyframes may-ani {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            30% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+
+
+        .may strong {
+            font-size: 55px;
+            font-style: italic;
+            letter-spacing: -2px;
+        }
+
+        .may p {
+            color: #fff;
+
+        }
+
+        .may ul {
+            width: 185px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .may ul li {
+            line-height: 40px;
+            color: #333;
+            font-size: 10px;
+            letter-spacing: 5px;
+            font-weight: 600;
+            border-bottom: 1px solid #333;
+            animation-name: may-li-ani;
+            animation-duration: 0.8s;
+        }
+
+        @keyframes may-li-ani {
+            0% {
+                opacity: 0;
+                letter-spacing: -5px;
+            }
+
+            30% {
+                opacity: 0;
+                letter-spacing: -5px;
+            }
+
+            50% {
+                opacity: 0;
+                letter-spacing: -5px;
+            }
+
+            100% {
+                opacity: 1;
+                letter-spacing: 5px;
+            }
+        }
+
+        .may ul li:nth-child(2) {
+            animation-duration: 1.1s;
+            border-bottom: 1px solid black;
+        }
+
+        .may ul li:nth-child(3) {
+            animation-duration: 1.5s;
+            border-bottom: 1px solid black;
+        }
+
+        .may ul li a {
+            display: block;
+        }
+
+        .may h3 {
+            position: absolute;
+            top: 100%;
+            right: 25px;
+            font-size: 40px;
+            animation-name: may-h3;
+            animation-duration: 1.8s;
+        }
+
+        @keyframes may-h3 {
+            0% {
+                opacity: 0;
+                top: 90%;
+            }
+
+            30% {
+                opacity: 0;
+                top: 95%;
+            }
+
+            100% {
+                opacity: 1;
+                top: 100%;
+            }
+        }
+
+        /* section happy */
+        .happy {
+            width: 85%;
+            margin: 0 auto;
+            color: #333;
+            margin-top: 100px;
+
+        }
+
+        .happy h2 {
+            font-size: 40px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        .happy h2 .colortext {
+            color: slategray;
+        }
+
+        .happy ul {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            background: steelblue;
+            overflow: hidden;
+        }
+
+        .happy ul li {
+            float: left;
+            width: 32.2%;
+            background: lemonchiffon;
+            margin-right: 1.7%;
+            margin-bottom: 80px;
+        }
+
+        .happy ul li:nth-child(3) {
+            margin-right: 0;
+            background: rgb(44, 136, 101);
+        }
+
+        .happy ul li:nth-child(2) {
+            background: lightcoral;
+        }
+
+        .happy ul li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 50px 0 50px 30px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .happy ul li p {
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        .happy ul li h3 {
+            font-size: 26px;
+            margin-bottom: 70px;
+        }
+
+        .happy ul li p .img {
+            width: 380px;
+            height: 200px;
+            margin-right: 0;
+            float: right;
+            overflow: hidden;
+        }
+
+        .happy ul li p .img img {
+            width: 100%;
+            transition: all 0.5s;
+        }
+
+        .happy ul li a:after {
+            content: '';
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 63%;
+            height: 2px;
+            background: cornsilk;
+        }
+
+
+        .happy ul li:nth-child(2) a:after {
+            width: 70%;
+        }
+
+        .happy ul li:nth-child(3) a:after {
+            width: 60%;
+        }
+
+        .happy ul li a:hover .img img {
+            transform: scale(1.2);
+            transition: all 1s;
+        }
+
+        /* section smart */
+        .smart {
+            width: 100%;
+            height: auto;
+            background-image: url(img/01.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 80px 0;
+        }
+
+        .smart .inner {
+            width: 85%;
+            height: auto;
+            overflow: hidden;
+            margin: 0 auto;
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+            text-align: center;
+        }
+
+        .smart .inner h2 {
+            font-size: 40px;
+            margin-bottom: 60px;
+        }
+
+        .smart .inner h2 .colortext {
+            color: olivedrab;
+        }
+
+        .smart .inner ul {
+            width: 30%;
+            float: left;
+        }
+
+        .smart .inner ul li {
+            width: 100%;
+        }
+
+        .smart .inner ul li a {
+            display: block;
+            width: 100%;
+            position: relative;
+            text-align: left;
+        }
+
+        .smart .inner ul li a .img {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .smart .inner ul li a .img img {
+            width: 100%;
+        }
+
+        .smart .inner ul li a h3 {
+            font-size: 22px;
+            line-height: 1.5;
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            background-color: #222;
+        }
+
+        .smart .inner ul li a:before {
+            content: 'tkdvnaxptm';
+            position: absolute;
+            left: 40px;
+            bottom: 40px;
+            font-size: 16;
+            font-weight: bold;
+            color: #fff;
+            padding-bottom: 25px;
+            border-bottom: 5px solid #fff;
+        }
+
+        .smart .inner ul li:nth-child(2) a:before {
+            color: sssssss;
+        }
+
+        .smart .row {
+            float: right;
+            width: 70%;
+            height: 437px;
+            background: rosybrown;
+        }
+
+        .smart .row .guide {
+            padding: 20px 0;
+            box-sizing: border-box;
+            text-align: center;
+            width: 50%;
+            float: left;
+            background-color: royalblue;
+        }
+
+        .smart .row .guide>p {
+            width: 30%;
+            margin-top: 30px;
+            font-size: 19px;
+            font-weight: bold;
+            margin: 20px auto;
+            border-bottom: 1px solid #000;
+            padding: 10px;
+            border-top: 1px solid #000;
+        }
+
+        .smart .row .guide .img {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .smart .row .guide .img img {
+            width: 100%;
+            transition: all 1s;
+        }
+
+        .smart .row .guide a:hover .img img {
+            transform: scale(1.3);
+            transition: all 1s;
+        }
+
+        .smart .row .guide:first-child {
+            border-right: 1px solid#ddd;
+        }
+
+        .smart .row .guide h3 {
+            margin-bottom: 30px;
+        }
+
+        /* section news */
+        .news {
+            width: 85%;
+            height: auto;
+            margin: 0 auto;
+            background: chartreuse;
+            overflow: hidden;
+        }
+
+        .news .issue {
+            margin: 5% 1.9% 5% 0%;
+            width: 49%;
+            float: left;
+            background-image: url(img/01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            height: 280px;
+            padding: 0;
+        }
+
+        .news .issue:nth-child(2) {
+            margin-right: 0;
+            background-image: url(img/02.jpg);
+        }
+
+        .news .issue h2 {
+            margin-top: 10%;
+            margin-left: 10%;
+        }
+
+        .news .issue p {
+            font-size: 15px;
+            color: #333;
+            margin-top: 20px;
+            margin-left: 10%;
+        }
+
+        .news .issue p .num {
+            font-size: 14px;
+            background-color: coral;
+            padding: 3px 7px;
+            border-radius: 50%;
+        }
+
+        /* footer */
+        footer {
+            width: 100%;
+            height: auto;
+            background-color: #222;
+            color: #adadad;
+            overflow: hidden;
+        }
+
+        footer .adress {
+            width: 85%;
+            margin: 10px auto;
+            line-height: 1.7;
+        }
+
+        footer .adress p {
+            float: left;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        footer .adress .flogo {
+            float: right;
+        }
+
+        footer .adress .copy {
+            font-size: 13px;
+        }
+
+        .top {
+            float: right;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: black;
+            background-position: top;
+            background-size: 25px;
+            background-repeat: no-repeat;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .top a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .top p {
+            font-size: 15px;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media(max-width:1000px) {
+
+            .main .inner,
+            .happy,
+            .smart .inner,
+            .news,
+            footer .adress {
+                width: 92%;
+            }
+
+            .inner_header .util ul {
+                display: inline;
+                width: 33%;
+                height: 100%;
+                float: left;
+                line-height: 90px;
+                margin-left: 2%;
+            }
+
+            .inner_header .util ul li {
+                padding: 0 5px;
+            }
+
+            .inner_header .logo {
+
+                line-height: 120px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .inner_header .logo a {
+                display: inline;
+                width: 33%;
+                height: 100%;
+            }
+
+            .related {
+                display: inline;
+                width: 33%;
+                float: right;
+                margin-right: 2%;
+            }
+
+            .related a {
+                display: inline;
+                float: right;
+                margin-top: 30px;
+                padding: 5px 10px;
+            }
+
+
+            /* main */
+            .main .inner .main_title {
+                width: 100%;
+            }
+
+            .main .inner .main_title h2 {
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: 30px;
+            }
+
+            .main .inner .main_title p {
+                left: 50%;
+                transform: translateX(-50%);
+                top: 40%;
+                text-align: center;
+                animation-name: titani;
+            }
+
+            .main .inner .main_title .btn {
+                left: 50%;
+                transform: translateX(-50%);
+                top: 50%;
+            }
+
+            @keyframes titani-btn {
+                0% {
+                    opacity: 0;
+                    top: 40%;
+                }
+
+                30% {
+                    opacity: 0;
+                    top: 40%;
+                }
+
+                100% {
+                    opacity: 1;
+                    top: 33%;
+                }
+            }
+
+            .may {
+                width: 90%;
+                height: auto;
+                top: 60%;
+                left: 50%;
+                transform: translateX(-50%);
+
+            }
+
+            .may>a {
+                width: 125px;
+                height: 125px;
+                float: left;
+                margin-left: 40px;
+            }
+
+            .may strong {
+                font-size: 40px;
+            }
+
+            .may ul {
+                float: right;
+                height: auto;
+                margin-right: 40px;
+            }
+
+            .may ul li {
+                line-height: 40px;
+            }
+
+            .may h3 {
+                font-size: 30px;
+                margin-right: 20px;
+            }
+
+            /* happy */
+            .happy ul li p .img {
+                width: 100%;
+                height: auto;
+            }
+
+            .happy ul li p .img img {
+                width: 100%;
+            }
+
+            .happy ul li a:after {
+                top: 20px;
+            }
+
+            .happy ul li a {
+                display: block;
+                padding: 40px 0 30px 10px;
+            }
+
+            .happy ul li p {
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+
+            .happy ul li h3 {
+                font-size: 20px;
+                margin-bottom: 30px;
+            }
+
+            /* section smart */
+
+            .smart .inner ul {
+                width: 100%;
+            }
+
+            .smart .inner ul li {
+                width: 50%;
+                display: inline;
+            }
+
+            .smart .inner ul li {
+                float: left;
+                width: 49%;
+            }
+
+            .smart .inner ul li:nth-child(2) {
+                float: right;
+            }
+
+            .smart .inner ul li a .img {
+                height: auto;
+            }
+
+            .smart .inner ul li a .img img {
+                width: 100%;
+            }
+
+            .smart .inner ul li a h3 {
+                font-size: 18px;
+                top: 0%;
+                left: 0%;
+                background-color: #222;
+                padding: 2%;
+            }
+
+            .smart .inner ul li a:before {
+                right: 0px;
+                bottom: 20px;
+                font-size: 13;
+                padding-bottom: 10px;
+            }
+
+
+            .smart .row {
+                width: 100%;
+                margin-top: 3%;
+            }
+
+            .smart .row .guide {
+                float: left;
+                width: 49%;
+                padding: 20px 0;
+            }
+
+            .smart .row .guide:nth-child(2) {
+                float: right;
+            }
+
+
+
+            /* section news */
+            .news {
+                width: 85%;
+                height: auto;
+                margin: 0 auto;
+                background: chartreuse;
+                overflow: hidden;
+            }
+
+            .news .issue {
+                margin: 5% 1.9% 0% 0%;
+                width: 100%;
+                display: block;
+                background-image: url(img/01.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+
+                height: 280px;
+                padding: 0;
+            }
+
+            .news .issue:nth-child(2) {
+                margin-right: 0;
+                background-image: url(img/02.jpg);
+                margin: 5% 1.9% 5% 0%;
+            }
+
+            .news .issue h2 {
+                margin-top: 10%;
+                margin-left: 10%;
+            }
+
+            .news .issue p {
+                font-size: 15px;
+                color: #333;
+                margin-top: 20px;
+                margin-left: 10%;
+            }
+
+            .news .issue p .num {
+                font-size: 14px;
+                background-color: coral;
+                padding: 3px 7px;
+                border-radius: 50%;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="wrqp">
+        <header>
+            <div class="inner_header">
+                <nav class="util">
+                    <ul>
+                        <li><a href="#"><i class="icon-instagram"></i></a></li>
+                        <li><a href="#"><i class="icon-youtube"></i></a></li>
+                        <li><a href="#"><i class="icon-facebook-rect"></i></a></li>
+                        <li><a href="#"><i class="icon-heart-empty"></i></a></li>
+                    </ul>
+                </nav>
+                <h1 class="logo"><img src="img/logo.png" alt="logo" style="width: 120px;"></h1>
+            </div>
+            <div class=" related">
+                <a href="#">
+                    <P>login</P>
+                </a>
+                <a href="#">
+                    <P>logout</P>
+                </a>
+            </div>
+        </header>
+        <!-- section main -->
+        <section class="main" id="main">
+            <div class="inner">
+                <div class="main_title">
+                    <h2>dkdlslsls</h2>
+                    <p>sssssssssssssssssskdddddd<br>ddddddddddddd</p>
+                    <a href="" class="btn">more</a>
+                </div>
+            </div>
+            <div class="may">
+                <a href="#">
+                    <strong>
+                        may
+                    </strong>
+                    <p>today book</p>
+                </a>
+                <ul>
+                    <li><a href="#">Korea</a></li>
+                    <li><a href="#">Korea</a></li>
+                    <li><a href="#">Korea</a></li>
+                </ul>
+                <h3>2020.03</h3>
+            </div>
+        </section>
+        <!-- section happy -->
+        <section class="happy">
+            <h2>gkaRp<span class="colortext">ddd</span>tds;s</h2>
+            <ul>
+                <li><a href="#">
+                        <p>together</p>
+                        <h3>sddddddss</h3>
+                        <p class="img"><img src="img/sp01.jpg" alt="img5"></p>
+                    </a>
+                </li>
+                <li><a href="#">
+                        <p>together</p>
+                        <h3>ssddddddds</h3>
+                        <p class="img"><img src="img/sp01.jpg" alt="img5"></p>
+                    </a>
+                </li>
+                <li><a href="#">
+                        <p>together</p>
+                        <h3>sssddddddd</h3>
+                        <p class="img"><img src="img/sp01.jpg" alt="img5"></p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- section smart -->
+        <section class="smart">
+            <div class="inner">
+                <h2>함께<span class="colortext2">똑똑한</span>소비생활</h2>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p class="img"><img src="img/sp01.jpg" alt=""></p>
+                            <h3>ddjsljla<br>sdafagfagfdag</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p class="img"><img src="img/sp01.jpg" alt=""></p>
+                            <h3>ddjsljla<br>sdafagfagfdag</h3>
+                        </a>
+                    </li>
+                </ul>
+                <div class="row">
+                    <div class="guide">
+                        <p>rsaoptjhao</p>
+                        <a href="#">
+                            <p class="img"><img src="img/sp03.jpg" alt=""></p>
+                            <h3>dsoajgorjoaid<br>dseokfa;gk;aghko;ag</h3>
+                        </a>
+                    </div>
+                    <div class="guide">
+                        <p>rsaoptjhao</p>
+                        <a href="#">
+                            <p class="img"><img src="img/sp03.jpg" alt=""></p>
+                            <h3>dsoajgorjoaid<br>dseokfa;gk;aghko;ag</h3>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- section news -->
+        <section class="news">
+            <div class="issue">
+                <h2>dddddd</h2>
+                <p><span class="num">1</span>daghahahtst</p>
+                <p><span class="num">1</span>daghahahtst</p>
+            </div>
+            <div class="issue">
+                <h2>doajgpajgpk</h2>
+                <p>dajt;oaijtoirajerji</p>
+                <p>fjagjaogjpajkgpoakgpoka</p>
+            </div>
+        </section>
+
+        <a href="#main" class="top">
+            <p>top</p>
+        </a>
+        <footer>
+            <div class="adress">
+                <p>ㅇ매ㅓㅐ먀대머ㅐㄹ멎댇래멀<br>dafagfagagagaaeg<br><span class="copy">COPYRIGHT 2019 DOWJFOAFJAOFJDOAF</span>
+                </p>
+                <p class="flogo"><a href="#"><img src="img/logo.png" alt="flogo" style="width:70%"></a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
