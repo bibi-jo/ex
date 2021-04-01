@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리은행</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    * {
+        list-style: none;
+        text-decoration: none;
+        border-collapse: collapse;
+        margin: 0px;
+        padding: 0px;
+        color: black;
+        font-family: 'GmarketSansMedium';
+        line-height: 140%;
+
+
+    }
+
+    .wrap {
+        background: #f1f2f3;
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .contents1 {
+        font-size: 18px;
+    }
+
+    .contents2 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .contents3 {
+        font-size: 12px;
+        font-weight: 100;
+    }
+
+    .result {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .intro_bg {
+        background-image: url("./img/16.jpg");
+        width: cover;
+        height: 800px;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+    }
+
+    .header {
+        display: flex;
+        width: 85%;
+        margin: auto;
+        height: 86px;
+    }
+
+    .searchArea {
+        width: 20%;
+        height: 30px;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: 20px;
+        text-align: center;
+
+    }
+
+    .searchArea>form {
+        margin-top: 4px;
+    }
+
+    .searchArea>form>input {
+        border: none;
+        width: 70%;
+        color: #fff;
+        background: rgba(0, 0, 0, 0, 0);
+
+
+    }
+
+    .searchArea>form>span {
+        width: 30%;
+        color: #fff;
+        font-weight: 500;
+        cursor: pointer;
+        margin-left: 5px;
+
+    }
+
+    .nav {
+        display: flex;
+        justify-content: flex-end;
+        line-height: 86px;
+        width: 80%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .nav>li {
+        margin-left: 10%;
+    }
+
+    .nav>li>a {
+        color: #fff;
+    }
+
+    .intro_text>h1,
+    .intro_text>h4,
+    .intro_text>p {
+        color: #fff;
+    }
+
+    .intro_text {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        margin: 231px auto 231px auto;
+    }
+
+
+
+    .amount {
+        position: relative;
+        top: -66px;
+        display: flex;
+        width: 85%;
+        background-color: #fff;
+        margin: auto;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .amount>li {
+        flex: 1;
+        background: #fff;
+        height: 132px;
+    }
+
+    .amount>li>div {
+        text-align: center;
+        height: 57px;
+        margin-top: 37px;
+
+    }
+
+    .amount>li:not(:last-child)>div {
+        border-right: 1px solid #e1e1e1;
+    }
+
+    .main_text1 {
+        width: 100%;
+        height: 650px;
+        margin-top: -132px;
+        background: #f1f2f3;
+    }
+
+    .main_text1>h2 {
+        padding-top: 116px;
+        text-align: center;
+
+    }
+
+
+    .main_text1>.contents1 {
+        text-align: center;
+    }
+
+
+    .main_text2 {
+        width: 100%;
+        height: 600px;
+        background: #fff;
+        padding: 70px 0px 50px 0px;
+    }
+
+    .food_photo img {
+
+        height: 427px;
+
+    }
+
+    .main_text2>h2 {
+        text-align: center;
+
+    }
+
+    .main_text2>.contents1 {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .service {
+        position: relative;
+        width: 85%;
+        display: flex;
+        height: 427px;
+        background: #fffbe9;
+        margin: auto;
+
+    }
+
+    .service>.contents3 {
+
+        padding: 5% 0 0 5%;
+        font-size: 14px;
+    }
+
+    .service>.contents3>h2 {
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+
+    .main_text3 {
+        width: 100%;
+        height: 418px;
+        background: url("./img/contact.png");
+        background-position: center center;
+
+    }
+
+    .main_text4 {
+        width: 100%;
+        height: 418px;
+        background: url("./img/contact2.png");
+        background-position: center center;
+
+    }
+
+    .main_text3>ul,
+    .main_text4>ul {
+        display: flex;
+        padding-top: 130px;
+    }
+
+    .main_text3>ul>li,
+    .main_text4>ul>li {
+        flex: 1;
+        text-align: center;
+
+    }
+
+
+
+    .more2 {
+        width: 220px;
+        height: 40px;
+        line-height: 40px;
+        margin: 16px auto;
+        border: 1px solid #000;
+        cursor: pointer;
+    }
+
+    .icons {
+        display: flex;
+        width: 85%;
+        margin: auto;
+
+    }
+
+    .icons>li {
+        height: 300px;
+        flex: 1;
+        background: #fff;
+        margin-top: 49px;
+        text-align: center;
+        box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .icons>li>.icon_img {
+        margin-top: 18px;
+    }
+
+    .icons>li:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    .icons .contents2 {
+        width: 190px;
+        margin: auto;
+        margin-bottom: 20px;
+
+
+    }
+
+    .more {
+        background: #ea8f50;
+        height: 30px;
+        color: #fff;
+        font-size: 12px;
+        line-height: 30px;
+        margin: 25px auto;
+        width: 100px;
+    }
+
+    footer {
+        background: #333;
+
+        display: flex;
+        padding: 30px;
+
+    }
+
+    footer>div:first-child {
+        flex: 3;
+        text-align: center;
+        color: #fff;
+        font-size: 19px;
+
+    }
+
+    footer>div {
+        flex: 6;
+        font-size: 13px;
+        color: #fff;
+    }
+
+    footer>div>img {
+        width: 30px;
+        padding: 5px;
+    }
+
+    footer>div:last-child {
+        flex: 3;
+        color: #fff;
+        font-size: 13px;
+        text-align: right;
+        margin-right: 40px;
+
+    }
+
+    @media(max-width:1000px) {
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 25px;
+            line-height: 1.9;
+        }
+
+        .contents1 {
+            font-size: 15px;
+        }
+
+        .result {
+            font-size: 20px;
+            line-height: 1.5
+        }
+
+        .header {
+            display: inline-block;
+            width: 100%;
+            height: 35px;
+            background-color: rgba(1, 1, 1, 0.9);
+        }
+
+        .searchArea {
+            width: 100%;
+            margin-top: 0;
+            border-radius: 0;
+            padding: 0px;
+            margin: 0;
+            font-size: 11px;
+
+        }
+
+        .icons>li>.icon_img {
+            padding-top: 20px;
+        }
+
+        .searchArea>form>input {
+            margin-top: 5px;
+            border: none;
+            width: 40%;
+            font-size: 11px;
+        }
+
+
+
+        .nav {
+            margin-top: 0px;
+            justify-content: center;
+            width: 100%;
+            line-height: 40px;
+            background-color: rgba(1, 1, 1, 0.5);
+        }
+
+        .nav>li {
+            margin: 15px;
+            font-size: 14px;
+        }
+
+        .intro_bg {
+            height: 500px;
+        }
+
+        .intro_text {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            margin: 150px auto;
+        }
+
+        .amount {
+            padding: 40px 0;
+            display: block;
+        }
+
+        .amount>li {
+            height: auto;
+            display: block;
+
+        }
+
+        .amount>li>div {
+            margin-top: 0px;
+        }
+
+        .amount>li:not(:last-child)>div {
+            padding-bottom: 34px;
+            border-right: none;
+        }
+
+        .more2 {
+            margin-top: 30px;
+        }
+
+        .main_text1,
+        .main_text2,
+        .main_text3,
+        .main_text3>ul,
+        .main_text4>ul,
+        .main_text4 footer {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+
+        }
+
+        .main_text2>h2 {
+            margin-top: 50px;
+        }
+
+        .service {
+            width: 100%;
+            display: inline-block;
+        }
+
+        .service>.contents3 {
+            background: #fff;
+            padding: 15% 0;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .food_photo>img {
+            width: 100%;
+            height: auto;
+
+        }
+
+        .main_text3 {
+            margin-top: -30px;
+            background-position: left center;
+
+
+        }
+
+        .main_text4 {
+            background-position: right center;
+            margin-top: -100px;
+
+        }
+
+        .icons,
+        .main_text1>ul>li,
+        .main_text2>.service>div,
+        .main3>ul>li,
+        .main_text2>.service>.food_photo>img,
+        .main_text2>.service>.contents3 {
+            display: block;
+            width: 100%;
+            margin-right: 0px;
+        }
+
+        .main_text3,
+        .main_text4 {
+            height: 300px;
+        }
+
+        footer {
+            padding: 10px 0;
+        }
+
+        footer>div {
+            padding: 10px;
+            font-size: 10px;
+        }
+    }
+
+    footer>div>img {
+        width: 15px;
+        padding: 2px;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="intro_bg">
+            <div class="header">
+                <div class="searchArea">
+                    <form>
+                        <input type="search" placeholder="Search">
+                        <span>GO</span>
+                    </form>
+                </div>
+                <ul class="nav">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="intro_text">
+                <h1>
+                    good banking
+                </h1>
+                <h4 class="contents1">woori bank</h4>
+                <p class="contents3">청년을 위한 우리미래드림바우처 첫통장 만들기!</p>
+            </div>
+        </div>
+        <!-- intoro end -->
+        <ul class="amount">
+            <li>
+                <div>
+                    <div class="contents1">미래를 위해 저금하는</div>
+                    <div class="result">청년저축뱅크</div>
+                </div>
+
+            </li>
+            <li>
+                <div>
+                    <div class="contents1">알뜰살뜰 내집마련</div>
+                    <div class="result">주택보금자리</div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="contents1">10분 인증완료</div>
+                    <div class="result">신혼부부 대출</div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="contents1">최대 90% 지원확정</div>
+                    <div class="result">전세자금 모기지론</div>
+                </div>
+            </li>
+        </ul>
+        <!-- amaout end -->
+        <div class="main_text1">
+            <h2>2021 새출발 설계</h2>
+            <div class="contents1">새봄, 새출발 청약저축 가입하고 경품 받으세요!</div>
+            <ul class="icons">
+                <li>
+                    <div class="icon_img">
+                        <img src="./img/icon0.svg">
+                    </div>
+                    <div class="contents2">the bank award</div>
+                    <div class="contents3">우리은행은 한국계 최초<br>[더뱅크]지에서 최초 3관왕을 받았습니다.</div>
+                    <div class="more">more</div>
+                </li>
+                <li>
+                    <div class="icon_img">
+                        <img src="./img/icon1.svg">
+                    </div>
+                    <div class="contents2">코로나19 금융지원</div>
+                    <div class="contents3">신속한 2차 금융지원 대출<br>코로나19 대처 국가보장 금융지원 확대</div>
+                    <div class="more">more</div>
+                </li>
+                <li>
+                    <div class="icon_img">
+                        <img src="./img/icon2.svg">
+                    </div>
+                    <div class="contents2">우리 WON뱅킹기업</div>
+                    <div class="contents3">기업금융을 스마트폰으로 언제 어디서나<br>편하게 일사천리! 관리</div>
+                    <div class="more">more</div>
+                </li>
+            </ul>
+        </div>
+        <!-- maintext1 end -->
+        <div class="main_text2">
+            <h2>우리은행 대표 모바일 APP</h2>
+            <div class="contents1">소액투자부터 미래설계까지 효율적인 자산관리</div>
+            <div class="service">
+                <div class="food_photo">
+                    <img src="./img/17.jpg">
+                </div>
+                <div class="contents3">
+                    <h2>봄맞이 청약저축 이벤트 실시</h2>
+                    우리은행은 2021년 새봄을 맞아 새봄 새출발!
+                    <br> 청약저축 가입해봄 이벤트를 5월 31일까지 실시한다고 29일 밝혔다.
+                    <br> 이번 이벤트는 주택청약종합저축, 청년우대형
+                    <br> 주택청약종합저축 신규가입 고객을 대상으로 갤럭시 버즈라이브
+                    <br> 무선이어폰(10명), 커블체어(150명)를 추첨을 통해 제공한다.
+                    <br> 또한 주택청약종합저축에서 청년우대형 주택청약종합저축으로
+                    <br> 전환 가입한 고객도 이벤트 대상에 포함된다.
+                    <br> 주택청약종합저축은 국민주택 . 민영주택 분양 우선권이 주어지는
+                    <br> 상품으로 매월 2만원 이상 50만원 이내에서 자유롭게 납입 가능하다.
+                    <br> 우리은행 관계자는 “새봄을 맞아 내 집 마련과 저축을 시작하는<br>고객을 위해 이번 이벤트를 마련했다”며
+                    <br> “앞으로도 우리은행을 거래하는 고객 모두가 만족할 수 있는
+                    <br> 서비스와 혜택을 담은 이벤트를 제공하겠다”고 말했다.
+                </div>
+            </div>
+        </div>
+        <!-- maintext2 end -->
+        <div class="main_text3">
+            <ul>
+                <li>
+                    <div>
+                        <h2>소상공인 종합지원센터</h2>
+                    </div>
+                    <div>종로, 명동, 은평, 판교, 부산 5곳</div>
+                    <div class="more2">더 알아보기</div>
+                </li>
+                <li></li>
+            </ul>
+        </div>
+        <!-- maintext2 end -->
+        <div class="main_text4">
+            <ul>
+                <li>
+
+                </li>
+                <li>
+                    <div>
+                        <h2>청년 자영업자 멘토링</h2>
+                    </div>
+                    <div>종합지원센터를 추가 개소</div>
+                    <div class="more2">더 알아보기</div>
+                </li>
+            </ul>
+        </div>
+        <!-- maintext4 end -->
+        <footer>
+            <div>Woori bank</div>
+            <div> 사업명 : 우리은행 <br> 영업점 안내 : 강남구 테헤란로 399 <br> 신용정보활용체제 <br> 개인신용 정보관리보호</div>
+            <div><img src="./img/snslink_04.png"><img src="img/snslink_01.png"><img src="img/snslink_02.png"><img
+                    src="./img/snslink_03.png"></div>
+        </footer>
+    </div>
+</body>
+
+</html>
