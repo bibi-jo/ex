@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="img/css/fontello.css">
+    <link rel="stylesheet" href="img/css/animation.css">
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            box-sizing: border-box;
+            font-family: 'Open Sans Condensed', sans-serif;
+
+        }
+
+        .container {
+            border-bottom: solid 2px;
+        }
+
+        header {
+            border-bottom: solid 2px;
+            padding: 10px;
+            font-size: 3rem;
+            font-weight: 700;
+
+        }
+
+        section {
+            margin: 0%;
+
+
+        }
+
+        .content1 {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        nav,
+        aside {
+            flex-basis: 150px;
+            flex-shrink: 0;
+            font-weight: 700;
+
+        }
+
+        nav {
+            border-right: solid 2px;
+            padding-right: 10px;
+        }
+
+        nav .onoff_btn {
+            position: absolute;
+            top: 500px;
+            left: 150px;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-inline-start: 10px;
+            font-size: 1.5rem;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+
+        }
+
+        a:hover {
+            border-bottom: cornsilk;
+            text-decoration: underline solid 2px;
+
+        }
+
+        aside {
+            border-left: solid 2px;
+            padding-inline-start: 10px;
+            font-size: 1.5rem;
+
+        }
+
+
+        main {
+            padding: 25px;
+        }
+
+
+
+
+        .left-img {
+            float: left;
+            width: 700px;
+            padding-right: 10px;
+            margin-top: 20px;
+        }
+
+        .right-img {
+            float: right;
+            width: 700px;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+
+        .right-font {
+            clear: right;
+
+
+        }
+
+        .left-font {
+            clear: left;
+
+
+
+        }
+
+        .botom-5 {
+            margin: 20px 0px;
+            display: inline-block;
+            width: 100%;
+            background: transparent center center/cover no-repeat;
+        }
+
+        .flex {
+            display: flex;
+            margin: 50px;
+        }
+
+        .img-3 {
+            width: 300px;
+        }
+
+        .table-img3 {
+            width: 100%;
+            display: flex;
+            margin: 15px 0 15px;
+
+        }
+
+        .table-img3 img {
+            width: 32%;
+        }
+
+        .table-img2 {
+            width: 100%;
+            display: flex;
+            margin: 15px 0 15px;
+
+        }
+
+        .table-img2 img {
+            width: 49%;
+        }
+
+        .pr-5 {
+            margin-right: auto;
+        }
+
+
+        @media(max-width:1000px) {
+            .content1 {
+                flex-direction: column;
+            }
+
+            nav {
+                position: relative;
+                border: none;
+                flex-basis: auto;
+                text-align: center;
+            }
+
+            nav .onoff_btn {
+                position: absolute;
+                top: -24px;
+                left: 50px;
+                z-index: 1;
+                transform: rotate(90deg);
+                cursor: pointer;
+                width: 20px;
+            }
+
+            aside {
+                display: none;
+            }
+
+            li {
+                display: inline;
+                padding: 5px;
+            }
+
+            .left-img,
+            .right-img,
+            .right-font,
+            .left-font {
+                display: block;
+                width: 100%;
+                padding-bottom: 20px;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+
+        /* Helper Classes */
+        .absolute-center {
+            position: absolute;
+            top: 50%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            display: table;
+            width: 100%;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+
+        .white {
+            color: white;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .dark-overlay:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .slider-container {
+            position: relative;
+            background: center center/cover no-repeat;
+            background-color: rgba(0, 0, 0, 0.95);
+            background-image: url("https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
+            width: 100%;
+            height: 60%;
+            min-height: 260px;
+            max-height: 620px;
+            overflow: hidden;
+        }
+
+        .slide-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            /* Animation */
+            animation: slideFadeAndKenBurns 34s linear infinite;
+            /* Background Image */
+            background: transparent center center/cover no-repeat;
+        }
+
+        /* Slides, Individual */
+        /*figure*/
+        .slide-1 {
+            opacity: 1;
+            animation-delay: 0s;
+            background-image: url("./img/10.jpg");
+        }
+
+        .slide-2 {
+            animation-delay: 8.5s;
+            background-image: url("./img/11.jpg");
+        }
+
+        .slide-3 {
+            animation-delay: 17s;
+            background-image: url("./img/12.jpg");
+        }
+
+        /* Slider Fading & Scaling (Ken Burns Effect) Animation Keyframes */
+        @keyframes slideFadeAndKenBurns {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            5% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 0;
+                transform: scale(1.1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1);
+                background-position: center center;
+            }
+        }
+
+        #form-main {
+            width: 100%;
+            float: left;
+
+            background: center bottom /cover no-repeat;
+        }
+
+        #feedback-page {
+            text-align: center;
+        }
+
+        #form-div {
+            background-color: rgba(224, 224, 224, 0.5);
+            padding: 35px;
+            width: 450px;
+            float: left;
+            left: 50%;
+            position: relative;
+            margin-top: 30px;
+            margin-left: -260px;
+            margin-bottom: 30px;
+
+
+        }
+
+        .feedback-input {
+            color: #000;
+            font-size: 12px;
+            line-height: 22px;
+            padding: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+
+
+        }
+
+        .feedback-input:focus {
+            background: #000;
+            color: #fff;
+            outline: none;
+            padding: 5px;
+            border: none;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            line-height: 150%;
+
+        }
+
+        #button-blue {
+            float: left;
+            width: 100%;
+            background-color: #000;
+            color: white;
+            font-size: 24px;
+            padding-top: 22px;
+            padding-bottom: 22px;
+            transition: all 0.3s;
+            margin-top: -4px;
+            font-weight: 700;
+            border: none;
+        }
+
+        #button-blue:hover {
+            background-color: rgba(0, 0, 0, 0);
+            color: #000;
+        }
+
+        .submit:hover {
+            color: #000;
+            border: none;
+        }
+
+        .ease {
+            width: 0px;
+            height: 74px;
+            -webkit-transition: .3s ease;
+            -moz-transition: .3s ease;
+            -o-transition: .3s ease;
+            -ms-transition: .3s ease;
+            transition: .3s ease;
+        }
+
+        @media only screen and (max-width: 580px) {
+            #form-div {
+                left: 3%;
+                margin-right: 3%;
+                width: 88%;
+                margin-left: 0;
+                padding-left: 3%;
+                padding-right: 3%;
+            }
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            clear: both;
+            display: block;
+        }
+    </style>
+    <title>DLWIM SLOOA</title>
+</head>
+
+<body>
+    <div class="slider-container">
+        <figure class="slide-bg slide-1"></figure>
+        <figure class="slide-bg slide-2"></figure>
+        <figure class="slide-bg slide-3"></figure>
+        <div class="slide-content dark-overlay">
+            <div class="absolute-center">
+                <h1 class="white center">Ullamco laboris nisi<br> ut aliquip ex ea</h1>
+                <h4 class="white center">Architecto beatae vitae dicta<br> sunt explicabo nemo enim ipsam voluptatem
+                    quia
+                </h4>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <header>
+                <i class="icon-noun_yoga_157455 animate-spin"></i> DLWIM SLOOA
+            </header>
+            <div class="content1">
+                <nav>
+                    <ul>
+                        <a href="">
+                            <li>Dolor</li>
+                        </a>
+                        <a href="">
+                            <li>Odit</li>
+                        </a>
+                        <a href="">
+                            <li>Magnaillum</li>
+                        </a>
+                    </ul>
+
+                    <div class="onoff_btn">
+                        <img src="./img/do.jpg">
+                    </div>
+                </nav>
+                <main>
+
+                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora molestias, qui unde vero enim
+                        odit atLorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora molestias, qui unde
+                        vero
+                        enim odit atLorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora molestias, qui
+                        unde vero
+                        enim oditat illum reiciendis quisquam magnaillum reiciendis quisquam magnaillum reiciendis
+                        quisquam magnam eaque, ab debitis vitae iste animi est voluptatum quia eius?
+                    </p>
+
+
+                    <img src="./img/15.jpg" style="width: 100%;">
+
+                    <div class="botom-5">
+                        <img src="./img/10.jpg" class="left-img">
+                        <h3 class="right-font m-pt-5">quisquam magnam</h3>
+                        <p class="right-font"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora
+                            molestias,
+                            qui unde vero enim odit at
+                            illum reiciendis quisquam magnam eaque, ab debitis vitae iste animi est voluptatum quia
+                            eius?llum reiciendis quisquam magnam eaque, ab debitis vitae iste animi est voluptallum
+                            reiciendis quisquam magnam eaque, ab debitis vitae iste animi est voluptallum reiciendis
+                            quisquam magnam eaque, ab debitis vitae iste animi est volupta
+                        </p>
+                    </div>
+                    <div class="botom-5">
+                        <img src="./img/11.jpg" class="right-img">
+                        <h3 class="left-font m-pt-5">quisquam magnam</h3>
+                        <p class="left-font">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident dolores
+                            saepe adipiscillum reiciendis quisquam magnam eaque, ab debitis vitae iste animi est
+                            voluptallum reiciendis quisquam magnam eaque, ab debitis vitae iste animi est voluptallum
+                            reiciendis quisquam magnam eaque, ab debitis vitae iste animi est volupta
+                            sapiente laboriosam, necessitatibus et minus nobis? Iste placeat eaque asperiores quibusdam!
+                            Vero, laboriosam saepe? Illum fugit aperiam reiciendis.</p>
+                    </div>
+
+
+                    <div class="table-img3">
+                        <img src="./img/sp03.jpg" class="pr-5">
+                        <img src="./img/sp03.jpg" class="pr-5">
+                        <img src="./img/sp03.jpg">
+                    </div>
+                    <div class="table-img2">
+                        <img src="./img/sp01.jpg" class="pr-5">
+
+                        <img src="./img/sp01.jpg">
+                    </div>
+
+
+
+
+                </main>
+                <aside>
+                    AD
+                </aside>
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="form-main" style="background-image: url(./img/08.jpg);">
+            <div id="form-div">
+                <form class="form" id="form1">
+
+                    <p class="name">
+                        <input name="name" type="text" class="feedback-input" placeholder="Name" id="name" />
+                    </p>
+
+                    <p class="email">
+                        <input name="email" type="text" class="feedback-input" id="email" placeholder="Email" />
+                    </p>
+
+                    <p class="text">
+                        <textarea name="text" class="feedback-input" id="comment" placeholder="Comment"></textarea>
+                    </p>
+
+
+                    <div class="submit">
+                        <input type="submit" value="SEND" id="button-blue" />
+                        <div class="ease"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>ebbbbbe@naver.com<br>Copyright(c) nanasalon All rights reserved
+    </footer>
+
+
+
+</body>
+
+</html>
