@@ -155,7 +155,7 @@ address, em, i {font-style: normal;}
                     padding: 90px 0 50px;
                 }
           /*about*/
-          section.about {
+          section.about2 {
 
             width: 90%;
             margin: 5% auto 2%;
@@ -164,24 +164,24 @@ address, em, i {font-style: normal;}
             box-sizing: border-box;
         }
 
-        section.about .about1 {
+        section.about2 .about1 {
             text-align: left;
             animation-name: slid-up;
             animation-duration: 2.2s;
         }
 
-        section.about .about1 img {
+        section.about2 .about1 img {
             width: 100%;
             padding: 10px 0;
         }
 
-        section.about .about1 h5 {
+        section.about2 .about1 h5 {
             text-align: justify;
             padding: 50px 0;
             font-size: 1rem;
         }
 
-        section.about .about2 {
+        section.about2 .about2 {
             display: flex;
             text-align: justify;
             padding: 10px 0;
@@ -189,32 +189,32 @@ address, em, i {font-style: normal;}
             animation-duration: 2.2s;
         }
 
-        section.about .about2 h3 {
+        section.about2 .about2 h3 {
             font-size: 2.5rem;
             padding-bottom: 20px;
         }
 
-        section.about .about2 .left {
+        section.about2 .about2 .left {
             flex-basis: 50%;
             padding: 2% 2% 2% 0%;
         }
 
-        section.about .about2 .right {
+        section.about2 .about2 .right {
             flex-basis: 50%;
             padding: 2% 0% 2% 2%;
         }
 
         @media (max-width:1000px) {
-            section.about, section.membership {
+            section.about2, section.membership {
                 width: 95%;
             }
 
-            section.about .about2 {
+            section.about2 .about2 {
                 display: block;
             }
 
-            section.about .about2 .left,
-            section.about .about2 .right {
+            section.about2 .about2 .left,
+            section.about2 .about2 .right {
                 padding: 2% 0%;
             }
         }
@@ -711,8 +711,8 @@ address, em, i {font-style: normal;}
         /* global */
         section.global {
             width: 95%;
-            padding: 3% 0;
-            margin: 5% auto 0;
+            padding: 0;
+            margin: 2% auto 0;
             text-align: center;
             position: relative;
         }
@@ -728,15 +728,18 @@ address, em, i {font-style: normal;}
             z-index: -1;
         }
 
+        section.global .title{
+            padding: 0;
+        }
         section.global .title h2 {
             font-size: 3rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         section.global .title p {
             font-size: 1.5rem;
             line-height: 1.4;
-            margin-bottom: 7%;
+            margin-bottom: 10px;
         }
 
         section.global ul {
@@ -836,7 +839,8 @@ address, em, i {font-style: normal;}
 
 
             section.visual .title {
-                top: 17%;
+                top: 10%;
+                padding: 0;
             }
 
             section.visual .menu {
@@ -863,7 +867,7 @@ address, em, i {font-style: normal;}
                 margin-top: 30px;
             }
 
-
+        
             /* about */
             section.about {
                 width: 100%;
@@ -968,3 +972,5 @@ address, em, i {font-style: normal;}
             section.global ul li:nth-child(3) {
                 margin-top: 0px;
             }
+
+        }
