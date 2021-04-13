@@ -929,7 +929,9 @@ address, em, i {font-style: normal;}
             }
 
             /* premium */
-
+            section.premium, section.global{
+                width: 100%;
+            }
             section.premium .banner li {
                 width: 40%;
             }
@@ -962,6 +964,7 @@ address, em, i {font-style: normal;}
                 float: none;
                 width: 100%;
                 display: block;
+                padding: 30px 0;
             }
 
             section.global ul li a .img {
