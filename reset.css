@@ -19,6 +19,7 @@ address, em, i {font-style: normal;}
             color: black;
             width: 100%; 
   align-items: center;
+  animation: bugfix infinite 1s; 
         }
 
         .wrap {
@@ -86,6 +87,8 @@ address, em, i {font-style: normal;}
         header nav .gnb li a :focus:after {
             width: 100%;
         }
+
+        label, #toggle{display:none;}
 
                 /* footer */
                 footer {
@@ -219,11 +222,42 @@ address, em, i {font-style: normal;}
             }
             section.about2 .about2 h3 {
                 font-size: 3rem;
+        }             
+        nav{display:none;}
+        #toggle:checked + nav{display:block;} 
+    
+        label {display:block; text-align:center;background: url('menu.png'); 
+            background-repeat: no-repeat;
+            background-position:95% 40px;background-size: 50px 40px;
         }
-    }
+        header {
+            padding: 0;
+        }
+        header nav {
+            float: none;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+        }
+        header .logo {
+    font-size: 4rem;
+    padding-left: 50px;
+}
+        header nav .gnb li {
+            display:block;width:100%;text-align:center;border-top:1px solid #ccc;padding: 3px;
+        }
 
+        header nav .gnb li a {
+            display: block;
+            font-size: 3rem;
+            text-transform: uppercase;
+            position: relative;
+            font-weight:bold;
+            color: #fff;
+        }
 
     
+        }
+  
         @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
 
