@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="reset.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <link rel="" href="reset.css" type="text/css">
+
+    <title>SAMCHEONG GALLERY</title>
+    <style>
+        section.membership {
+            position: relative;
+            width: 90%;
+            margin: 5% auto 2%;
+            overflow: hidden;
+            height: 700px;
+        }
+
+        .fs-slide {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-transition: opacity 1s ease;
+            transition: opacity 1s ease;
+        }
+
+        .fs-slide:first-child {
+            opacity: 1;
+        }
+
+        .fs-quick-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            z-index: 1;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+
+        .fs-quick-btn {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin: 0 2px;
+            border-radius: 50%;
+            cursor: pointer;
+            -webkit-transition: opacity 200ms ease;
+            transition: opacity 200ms ease;
+            background-color: rgba(255, 255, 255, 0.8);
+
+        }
+
+        .fs-quick-btn:hover {
+            opacity: 0.8;
+        }
+
+        .fs-quick-btn:first-child {
+            background-color: coral;
+        }
+
+        .fs-next-btn,
+        .fs-prev-btn {
+            position: absolute;
+            display: none;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            cursor: pointer;
+            font-family: sans-serif;
+            background-color: rgba(255, 255, 255, 0);
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-transition: all 200ms ease;
+            transition: all 200ms ease;
+        }
+
+        @media (max-width: 500px) {
+
+            .fs-next-btn,
+            .fs-prev-btn {
+                width: 50%;
+            }
+        }
+
+        .fs-next-btn:before,
+        .fs-prev-btn:before {
+            position: absolute;
+            top: 50%;
+            font-size: 3vw;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .fs-next-btn:hover,
+        .fs-prev-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 500px) {
+
+            .fs-next-btn:hover,
+            .fs-prev-btn:hover {
+                background-color: rgba(255, 255, 255, 0);
+            }
+        }
+
+        .fs-prev-btn {
+            left: 0;
+            transform: translateX(-100%);
+        }
+
+        .fs-prev-btn:before {
+            content: "<";
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media (max-width: 500px) {
+            [data-am-fadeshow] .fs-prev-btn:before {
+                left: 30px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .fs-prev-btn {
+                transform: translate(0);
+            }
+        }
+
+        .fs-next-btn {
+            right: 0;
+            transform: translateX(100%);
+        }
+
+        .fs-next-btn:before {
+            content: ">";
+            right: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        @media (max-width: 500px) {
+            [data-am-fadeshow] .fs-next-btn:before {
+                right: 30px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            [data-am-fadeshow] .fs-next-btn {
+                -webkit-transform: translate(0);
+                -ms-transform: translate(0);
+                transform: translate(0);
+            }
+        }
+
+        input[type=radio] {
+            position: fixed;
+            top: -9999px;
+        }
+
+
+        input[type=radio]:checked:nth-of-type(5)~.fs-slides .fs-slide {
+            opacity: 0;
+            -webkit-animation: none !important;
+            animation: none !important;
+        }
+
+        input[type=radio]:checked:nth-of-type(5)~.fs-slides .fs-slide:nth-child(5) {
+            opacity: 1;
+        }
+
+        input[type=radio]:checked:nth-of-type(5)~.fs-quick-nav .fs-quick-btn {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Cancel autoplay */
+            -webkit-animation: none !important;
+            animation: none !important;
+        }
+
+        input[type=radio]:checked:nth-of-type(5)~.fs-quick-nav .fs-quick-btn:nth-child(5) {
+            background-color: coral;
+        }
+
+        input[type=radio]:checked:nth-of-type(5)~.fs-quick-nav .fs-quick-btn:nth-child(5):hover {
+            opacity: 1;
+        }
+
+        input[type=radio]:checked:nth-of-type(4) {
+            /* Show slide */
+            /* Add active state to dot */
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(4)~.fs-slides .fs-slide {
+            opacity: 0;
+            -webkit-animation: none !important;
+            animation: none !important;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(4)~.fs-slides .fs-slide:nth-child(4) {
+            opacity: 1;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(4)~.fs-quick-nav .fs-quick-btn {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Cancel autoplay */
+            -webkit-animation: none !important;
+            animation: none !important;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(4)~.fs-quick-nav .fs-quick-btn:nth-child(4) {
+            background-color: coral;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(4)~.fs-quick-nav .fs-quick-btn:nth-child(4):hover {
+            opacity: 1;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(3) {
+            /* Show slide */
+            /* Add active state to dot */
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(3)~.fs-slides .fs-slide {
+            opacity: 0;
+            -webkit-animation: none !important;
+            animation: none !important;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(3)~.fs-slides .fs-slide:nth-child(3) {
+            opacity: 1;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(3)~.fs-quick-nav .fs-quick-btn {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Cancel autoplay */
+            -webkit-animation: none !important;
+            animation: none !important;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(3)~.fs-quick-nav .fs-quick-btn:nth-child(3) {
+            background-color: coral;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(3)~.fs-quick-nav .fs-quick-btn:nth-child(3):hover {
+            opacity: 1;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(2) {
+            /* Show slide */
+            /* Add active state to dot */
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(2)~.fs-slides .fs-slide {
+            opacity: 0;
+            -webkit-animation: none !important;
+            animation: none !important;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(2)~.fs-slides .fs-slide:nth-child(2) {
+            opacity: 1;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(2)~.fs-quick-nav .fs-quick-btn {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Cancel autoplay */
+            -webkit-animation: none !important;
+            animation: none !important;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(2)~.fs-quick-nav .fs-quick-btn:nth-child(2) {
+            background-color: coral;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(2)~.fs-quick-nav .fs-quick-btn:nth-child(2):hover {
+            opacity: 1;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(1) {
+            /* Show slide */
+            /* Add active state to dot */
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(1)~.fs-slides .fs-slide {
+            opacity: 0;
+            -webkit-animation: none !important;
+            animation: none !important;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(1)~.fs-slides .fs-slide:nth-child(1) {
+            opacity: 1;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(1)~.fs-quick-nav .fs-quick-btn {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Cancel autoplay */
+            -webkit-animation: none !important;
+            animation: none !important;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(1)~.fs-quick-nav .fs-quick-btn:nth-child(1) {
+            background-color: coral;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:nth-of-type(1)~.fs-quick-nav .fs-quick-btn:nth-child(1):hover {
+            opacity: 1;
+        }
+
+        [data-am-fadeshow] input[type=radio]:checked:first-of-type:last-of-type~.fs-quick-nav,
+        [data-am-fadeshow] input[type=radio]:checked:first-of-type:last-of-type~.fs-prev-nav,
+        [data-am-fadeshow] input[type=radio]:checked:first-of-type:last-of-type~.fs-next-nav {
+            display: none !important;
+        }
+
+        [data-am-fadeshow]:hover .fs-prev-btn,
+        [data-am-fadeshow]:hover .fs-next-btn {
+            -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+            transform: translateX(0);
+        }
+
+        /*
+ * ===== PREV/NEXT NAVIGATION =====
+ *
+ * This section handles the prev/next navigation.
+ */
+        /* Handle Prev/Next buttons */
+        [data-am-fadeshow~=next-prev-navigation] {
+            /* Display first pair of Prev/Next Buttons on load */
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(5) {
+            /* Show previous button */
+            /* Show next button */
+            /* Show last prev button if first slide */
+            /* Show first next button if last slide */
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(5)~.fs-prev-nav .fs-prev-btn {
+            display: none;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(5)~.fs-prev-nav .fs-prev-btn:nth-child(4) {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(5):first-of-type~.fs-prev-nav .fs-prev-btn:last-child {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(5):last-of-type~.fs-next-nav .fs-next-btn:first-child {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(4) {
+            /* Show previous button */
+            /* Show next button */
+            /* Show last prev button if first slide */
+            /* Show first next button if last slide */
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(4)~.fs-prev-nav .fs-prev-btn {
+            display: none;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(4)~.fs-prev-nav .fs-prev-btn:nth-child(3) {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(4)~.fs-next-nav .fs-next-btn {
+            display: none;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(4)~.fs-next-nav .fs-next-btn:nth-child(5) {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(4):first-of-type~.fs-prev-nav .fs-prev-btn:last-child {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(4):last-of-type~.fs-next-nav .fs-next-btn:first-child {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(3) {
+            /* Show previous button */
+            /* Show next button */
+            /* Show last prev button if first slide */
+            /* Show first next button if last slide */
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(3)~.fs-prev-nav .fs-prev-btn {
+            display: none;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(3)~.fs-prev-nav .fs-prev-btn:nth-child(2) {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(3)~.fs-next-nav .fs-next-btn {
+            display: none;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(3)~.fs-next-nav .fs-next-btn:nth-child(4) {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(3):first-of-type~.fs-prev-nav .fs-prev-btn:last-child {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(3):last-of-type~.fs-next-nav .fs-next-btn:first-child {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(2) {
+            /* Show previous button */
+            /* Show next button */
+            /* Show last prev button if first slide */
+            /* Show first next button if last slide */
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(2)~.fs-prev-nav .fs-prev-btn {
+            display: none;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(2)~.fs-prev-nav .fs-prev-btn:nth-child(1) {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(2)~.fs-next-nav .fs-next-btn {
+            display: none;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(2)~.fs-next-nav .fs-next-btn:nth-child(3) {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(2):first-of-type~.fs-prev-nav .fs-prev-btn:last-child {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(2):last-of-type~.fs-next-nav .fs-next-btn:first-child {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(1) {
+            /* Show previous button */
+            /* Show next button */
+            /* Show last prev button if first slide */
+            /* Show first next button if last slide */
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(1)~.fs-next-nav .fs-next-btn {
+            display: none;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(1)~.fs-next-nav .fs-next-btn:nth-child(2) {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(1):first-of-type~.fs-prev-nav .fs-prev-btn:last-child {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] input[type=radio]:checked:nth-of-type(1):last-of-type~.fs-next-nav .fs-next-btn:first-child {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] .fs-prev-btn:last-child {
+            display: block;
+        }
+
+        [data-am-fadeshow~=next-prev-navigation] .fs-next-btn:nth-child(2) {
+            display: block;
+        }
+
+        /*
+ * ===== AUTOPLAY =====
+ *
+ * Functions to handle autoplay.
+ * If you're not going to use autoplay, set $autoplay to false.
+ * This part tends to compile into a lot of uneccesary CSS otherwise.
+ */
+        @keyframes quickNavAnimation-5 {
+            0% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            4%,
+            20% {
+                background-color: coral;
+            }
+
+            24%,
+            100% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        @-webkit-keyframes quickNavAnimation-5 {
+            0% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            4%,
+            20% {
+                background-color: coral;
+            }
+
+            24%,
+            100% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        @keyframes slidesAnimation-5 {
+            0% {
+                opacity: 0;
+            }
+
+            4%,
+            20% {
+                opacity: 1;
+            }
+
+            24%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes slidesAnimation-5 {
+            0% {
+                opacity: 0;
+            }
+
+            4%,
+            20% {
+                opacity: 1;
+            }
+
+            24%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+
+        [data-am-fadeshow~=autoplay] input[type=radio]:nth-of-type(5):last-of-type~.fs-slides .fs-slide {
+            -webkit-animation: slidesAnimation-5 25s infinite;
+            animation: slidesAnimation-5 25s infinite;
+        }
+
+        [data-am-fadeshow~=autoplay] input[type=radio]:nth-of-type(5):last-of-type~.fs-quick-nav .fs-quick-btn {
+            -webkit-animation: quickNavAnimation-5 25s infinite;
+            animation: quickNavAnimation-5 25s infinite;
+        }
+
+        [data-am-fadeshow~=autoplay] input[type=radio]:nth-of-type(5):last-of-type~.fs-slides .fs-slide:nth-child(1),
+        [data-am-fadeshow~=autoplay] input[type=radio]:nth-of-type(5):last-of-type~.fs-quick-nav .fs-quick-btn:nth-child(1) {
+            -webkit-animation-delay: -1s;
+            animation-delay: -1s;
+        }
+
+        [data-am-fadeshow~=autoplay] input[type=radio]:nth-of-type(5):last-of-type~.fs-slides .fs-slide:nth-child(2),
+        [data-am-fadeshow~=autoplay] input[type=radio]:nth-of-type(5):last-of-type~.fs-quick-nav .fs-quick-btn:nth-child(2) {
+            -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+        }
+
+        [data-am-fadeshow~=autoplay] input[type=radio]:nth-of-type(5):last-of-type~.fs-slides .fs-slide:nth-child(3),
+        [data-am-fadeshow~=autoplay] input[type=radio]:nth-of-type(5):last-of-type~.fs-quick-nav .fs-quick-btn:nth-child(3) {
+            -webkit-animation-delay: 9s;
+            animation-delay: 9s;
+        }
+
+        [data-am-fadeshow~=autoplay] input[type=radio]:nth-of-type(5):last-of-type~.fs-slides .fs-slide:nth-child(4),
+        [data-am-fadeshow~=autoplay] input[type=radio]:nth-of-type(5):last-of-type~.fs-quick-nav .fs-quick-btn:nth-child(4) {
+            -webkit-animation-delay: 14s;
+            animation-delay: 14s;
+        }
+
+        [data-am-fadeshow~=autoplay] input[type=radio]:nth-of-type(5):last-of-type~.fs-slides .fs-slide:nth-child(5),
+        [data-am-fadeshow~=autoplay] input[type=radio]:nth-of-type(5):last-of-type~.fs-quick-nav .fs-quick-btn:nth-child(5) {
+            -webkit-animation-delay: 19s;
+            animation-delay: 19s;
+        }
+
+        @keyframes quickNavAnimation-4 {
+            0% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            5%,
+            25% {
+                background-color: coral;
+            }
+
+            30%,
+            100% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        @-webkit-keyframes quickNavAnimation-4 {
+            0% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            5%,
+            25% {
+                background-color: coral;
+            }
+
+            30%,
+            100% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        @keyframes slidesAnimation-4 {
+            0% {
+                opacity: 0;
+            }
+
+            5%,
+            25% {
+                opacity: 1;
+            }
+
+            30%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes slidesAnimation-4 {
+            0% {
+                opacity: 0;
+            }
+
+            5%,
+            25% {
+                opacity: 1;
+            }
+
+            30%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+
+
+        @keyframes quickNavAnimation-3 {
+            0% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            6.666%,
+            33.333% {
+                background-color: coral;
+            }
+
+            40%,
+            100% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        @-webkit-keyframes quickNavAnimation-3 {
+            0% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            6.666%,
+            33.333% {
+                background-color: coral;
+            }
+
+            40%,
+            100% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        @keyframes slidesAnimation-3 {
+            0% {
+                opacity: 0;
+            }
+
+            6.666%,
+            33.333% {
+                opacity: 1;
+            }
+
+            40%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes slidesAnimation-3 {
+            0% {
+                opacity: 0;
+            }
+
+            6.666%,
+            33.333% {
+                opacity: 1;
+            }
+
+            40%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+
+
+        @keyframes quickNavAnimation-2 {
+            0% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            10%,
+            50% {
+                background-color: coral;
+            }
+
+            60%,
+            100% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        @-webkit-keyframes quickNavAnimation-2 {
+            0% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            10%,
+            50% {
+                background-color: coral;
+            }
+
+            60%,
+            100% {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        @keyframes slidesAnimation-2 {
+            0% {
+                opacity: 0;
+            }
+
+            10%,
+            50% {
+                opacity: 1;
+            }
+
+            60%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes slidesAnimation-2 {
+            0% {
+                opacity: 0;
+            }
+
+            10%,
+            50% {
+                opacity: 1;
+            }
+
+            60%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        @media (max-width:1000px) {
+            section.about {
+                width: 95%;
+            }
+
+            section.about .about2 {
+                display: block;
+            }
+
+            section.about .about2 .left,
+            section.about .about2 .right {
+                padding: 2% 0%;
+            }
+    </style>
+</head>
+
+
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <header>
+            <a href="port05.html" class="logo">GALLERY</a>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="port05-about.html">about</a></li>
+                    <li><a href="port05-service.html">service</a></li>
+                    <li><a href="port05-membership.html">membership</a></li>
+                    <li><a href="port05-cunsulting.html">cunsulting</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- visual -->
+
+        <section class="membership">
+
+            <div class="container">
+
+                <div data-am-fadeshow="next-prev-navigation">
+
+                    <!-- Radio -->
+                    <input type="radio" name="css-fadeshow" id="slide-1" />
+                    <input type="radio" name="css-fadeshow" id="slide-2" />
+                    <input type="radio" name="css-fadeshow" id="slide-3" />
+
+                    <!-- Slides -->
+                    <div class="fs-slides">
+                        <div class="fs-slide" style="background-image: url('img/banner5.jpg');">
+                            <!-- Add content to images (sample) -->
+                            <div
+                                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                                <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 5vw; font-weight: bold;">All
+                                    participants</h1>
+                                <p style="font-size: 2vw; font-weight: 100; margin-top: 0;">Easy to implement and use on
+                                    <strong>yourThe number</strong> of people will be limited to 40
+                                </p>
+                            </div>
+                        </div>
+                        <div class="fs-slide" style="background-image: url('img/banner6.jpg');">
+                            <!-- Add content to images (sample) -->
+                            <div
+                                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                                <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 5vw; font-weight: bold;">
+                                    contents </h1>
+                                <p style="font-size: 2vw; font-weight: 100; margin-top: 0;">Easy to implement and use on
+                                    <strong>yourVisiting collectors and audiences</strong> can take part in our Docent
+                                    Tour programs
+                                </p>
+                            </div>
+                        </div>
+                        <div class="fs-slide" style="background-image: url('img/banner7.jpg');">
+                            <!-- Add content to images (sample) -->
+                            <div
+                                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                                <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 5vw; font-weight: bold;">
+                                    Museum of Contemporary</h1>
+                                <p style="font-size: 2vw; font-weight: 100; margin-top: 0;">Easy to implement and use on
+                                    <strong>Busan-based</strong> public art museum which focuses on contemporary
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Navigation -->
+                    <div class="fs-quick-nav">
+                        <label class="fs-quick-btn" for="slide-1"></label>
+                        <label class="fs-quick-btn" for="slide-2"></label>
+                        <label class="fs-quick-btn" for="slide-3"></label>
+                    </div>
+
+                    <!-- Prev Navigation -->
+                    <div class="fs-prev-nav">
+                        <label class="fs-prev-btn" for="slide-1"></label>
+                        <label class="fs-prev-btn" for="slide-2"></label>
+                        <label class="fs-prev-btn" for="slide-3"></label>
+                    </div>
+
+                    <!-- Next Navigation -->
+                    <div class="fs-next-nav">
+                        <label class="fs-next-btn" for="slide-1"></label>
+                        <label class="fs-next-btn" for="slide-2"></label>
+                        <label class="fs-next-btn" for="slide-3"></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <hr>
+            <div class="about2">
+                <div class="left">
+                    <h3>planning</h3>
+                    <p>GALLERY SP started out as Seoul Print Work Shop, the first print work shop in Korea, in 1989.
+                        When we moved to Chungdam-dong in 1998, it started to actively take on the structure of an art
+                        gallery. And in 2006, we were reopened at the new location in Sinsa-dong and is currently
+                        involved with the exhibition, planning and sales of contemporary art in various medium, such as
+                        painting, sculpture, print and ceramic. </p>
+                </div>
+                <div class="right">
+                    <h3>Print</h3>
+                    <p>We pay special attention to the emerging and mid-career artists by placing their works as the
+                        center of the exhibitions as well as promoting their work internationally through international
+                        art fairs. Since 2000, we have installed art works in large-scale architectural space such as
+                        hotels, hospitals and government offices, and we continually perform art consulting. In
+                        addition, Seoul Print Work Shop, Which has been producing about 20,000 print works, still
+                        actively plans and produces print works of promising artists and supplies them broadly through
+                        regular print fairs.</p>
+                </div>
+                <div class="right">
+                    <h3>producing</h3>
+                    <p>We pay special attention to the emerging and mid-career artists by placing their works as the
+                        center of the exhibitions as well as promoting their work internationally through international
+                        art fairs. Since 2000, we have installed art works in large-scale architectural space such as
+                        hotels, hospitals and government offices, and we continually perform art consulting. In
+                        addition, Seoul Print Work Shop, Which has been producing about 20,000 print works, still
+                        actively plans and produces print works of promising artists and supplies them broadly through
+                        regular print fairs.</p>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer>
+            <ul class="sns">
+                <li><a href="#"><img src="img/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="img/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="img/youtube.png" alt=""></a></li>
+                <li><a href="#"><img src="img/blog.png" alt=""></a></li>
+            </ul>
+            <h2 class="footerLogo">SAMCHEONG GALLERY</h2>
+            <ul>
+                <li>40-14, Samcheong-ro 7-gil,<br>Jongno-gu, Seoul, Korea</li>
+                <li>123-12-12345 | info@pkmgallery.com</li>
+                <li><span class="copyright">COPYRIGHT 2020</span></li>
+            </ul>
+            <div class="box">
+                <h2>Tuesday to Saturday: 10:00 am - 6:00 pm<br>last admission 5:30 pm<br>(closed on Sundays and
+                    Mondays)<br><br>
+                    *No admittance to anyone under<br>15 years of age for the exhibition<br>and Garden Cafe</h2>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

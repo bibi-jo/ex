@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="reset.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+
+    <title>SAMCHEONG GALLERY</title>
+    <style>
+        /*service*/
+        .grey {
+            background: #f5f5f5;
+        }
+
+        section.service {
+            width: 90%;
+            margin: 5% auto 2%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        section.service .service1 {
+            height: 100px;
+            position: relative;
+            margin: 10px auto 0px;
+            box-sizing: border-box;
+            animation-name: slid-up;
+            animation-duration: 1.5s;
+        }
+
+        section.service .service1 .left {
+            float: left;
+            width: 30%;
+            background: #f5f5f5;
+            height: 100%;
+            border-right: 1px solid rgb(195, 195, 195);
+        }
+
+        section.service .service1 .left p {
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            font-size: 1.5rem;
+            padding-left: 10px;
+            font-weight: bold;
+        }
+
+        section.service .service1 .right {
+            float: right;
+            width: 70%;
+        }
+
+        section.service .service1 .right p {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            line-height: 2rem;
+            text-align: left;
+            padding-left: 50px;
+            font-size: 1.3rem;
+        }
+
+        section.service .service2 {
+            height: 350px;
+            position: relative;
+            margin: 40px auto 0px;
+            box-sizing: border-box;
+            animation-name: slid-up;
+            animation-duration: 2.2s;
+        }
+
+        
+        section.service .service2 .left {
+            float: left;
+            width: 30%;
+            height: 100%;
+        }
+
+        section.service .service2 .right {
+            float: right;
+            width: 70%;
+            text-align: left;
+        }
+
+        section.service .service2 .right h5 {
+            padding: 20px 50px;
+            font-size: 1.5rem;
+        }
+
+        section.service .service2 .right p {
+            padding-left: 50px;
+            font-size: 1.3rem;
+        }
+
+        section.service .service2 .right h3 {
+            background: #000;
+            padding: 5px auto;
+            color: #fff;
+            font-size: 1.5rem;
+            width: 150px;
+            margin: 30px 50px;
+            text-align: center;
+        }
+
+        section.service .service2 .left img {
+            width: 100%;
+        }
+
+        @media (max-width:1000px) {
+            .grey {
+                background: none;
+            }
+
+            section.service {
+                width: 95%;
+            }
+
+            section.service .service2 .left,
+            section.service .service2 .right {
+                display: block;
+                width: 100%;
+                float: left;
+            }
+
+            section.service .service2 .right {
+                margin: 300px 0 50px;
+
+            }
+
+            section.service .service2 .right p,
+            section.service .service2 .right h5 {
+                padding: 20px 0;
+                margin: 0;
+            }
+
+            section.service .service2 .right h3 {
+                margin: 0;
+            }
+    </style>
+</head>
+
+
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <header>
+            <a href="port05.html" class="logo">GALLERY</a>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="port05-about.html">about</a></li>
+                    <li><a href="port05-service.html">service</a></li>
+                    <li><a href="port05-membership.html">membership</a></li>
+                    <li><a href="port05-cunsulting.html">cunsulting</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- visual -->
+        <section class="service">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8943.552990755614!2d126.97427158903011!3d37.57806469884698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcbd33f3f048b750a!2z6rCk65-s66as64u0!5e0!3m2!1sko!2skr!4v1618279021242!5m2!1sko!2skr"
+                width="100%" height="450" style="border:0; margin-bottom:20px; " allowfullscreen=""
+                loading="lazy"></iframe>
+            <div class="service1">
+                <div class="left">
+                    <p>VIP/Press Preview</p>
+                </div>
+                <div class="right">
+                    <p>May 13(Thu) 14:00 - 20:00<br>
+                        May 14(Fri) - 16(Sun) 11:00 - 13:00</p>
+                </div>
+            </div>
+            <div class="service1">
+                <div class="left">
+                    <p>Public Days</p>
+                </div>
+                <div class="right">
+                    <p>BEXCO Exhibition Center 1<br>
+                        55, APEC-ro, Haeundae-gu, Busan, Republic of Korea</p>
+                </div>
+            </div>
+            <div class="service1">
+                <div class="left">
+                    <p>Venue</p>
+                </div>
+                <div class="right">
+                    <p>Last entry 1 hour prior to the closing time<br>
+                        May 14(Fri) – 15(Sat) 13:00 - 20:00<br>
+                        May 16(Sun) 13:00 - 18:00</p>
+                </div>
+            </div>
+            <h2 class="title">Docent Tour</h2>
+            <div class="service2 grey">
+
+                <div class="left">
+                    <img src="img/right01.png" alt="">
+                </div>
+                <div class="right">
+                    <h5>Docent Tour</h5>
+                    <p>Visiting collectors and audiences can take part in our Docent Tour programs, organized and guided
+                        by our selected art professionals, to learn about the wide range of presented artworks and
+                        contemporary art in overall in most effective way.
+                    </p>
+                    <h3>View More</h3>
+                </div>
+            </div>
+            <div class="service2">
+                <div class="left">
+                    <img src="img/right02.png" alt="">
+                </div>
+                <div class="right">
+                    <h5>Art Film</h5>
+                    <p>Visiting collectors and audiences can take part in our Docent Tour programs, organized and guided
+                        by our selected art professionals, to learn about the wide range of presented artworks and
+                        contemporary art in overall in most effective way.
+                    </p>
+                    <h3>View More</h3>
+                </div>
+            </div>
+            <div class="service2 grey">
+                <div class="left">
+                    <img src="img/right03.png" alt="">
+                </div>
+                <div class="right">
+                    <h5>Kids</h5>
+                    <p>Art Busan introduces children's contents that children can participate in. Through creative
+                        education programs tailored to children's perspectives and sensibilities, we hope that it will
+                        be an opportunity for children to get closer to art even in the shrinking atmosphere of Corona
+                        19.
+                    </p>
+                    <h3>View More</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer>
+            <ul class="sns">
+                <li><a href="#"><img src="img/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="img/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="img/youtube.png" alt=""></a></li>
+                <li><a href="#"><img src="img/blog.png" alt=""></a></li>
+            </ul>
+            <h2 class="footerLogo">SAMCHEONG GALLERY</h2>
+            <ul>
+                <li>40-14, Samcheong-ro 7-gil,<br>Jongno-gu, Seoul, Korea</li>
+                <li>123-12-12345 | info@pkmgallery.com</li>
+                <li><span class="copyright">COPYRIGHT 2020</span></li>
+            </ul>
+            <div class="box">
+                <h2>Tuesday to Saturday: 10:00 am - 6:00 pm<br>last admission 5:30 pm<br>(closed on Sundays and
+                    Mondays)<br><br>
+                    *No admittance to anyone under<br>15 years of age for the exhibition<br>and Garden Cafe</h2>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
