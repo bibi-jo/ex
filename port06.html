@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="반응형 사이트 따라하기">
+    <meta name="keywords" content="반응형사이트, 웹퍼블리셔, 웹접근성, HTML5, webstoryboy, webs">
+    <title>반응형 사이트 만들기 : 사이드 이펙트3</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/lightgallery.css">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="반응형 사이트 만들기(title)" />
+    <meta property="og:url" content="http://richclub8.dothome.co.kr/responsive/html5/index.html" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="반응형 사이트 만들기(site_name)" />
+    <meta property="og:description" content="반응형 사이트 따라하기(description)" />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="반응형 사이트 만들기(title)" />
+    <meta name="twitter:description" content="반응형 사이트 만들기(description)." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="icon/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="icon/favicon-152.png">
+    <link rel="icon" href="path/to/favicon.png">
+    <link rel="icon" href="icon/favicon-16.png" sizes="16x16">
+    <link rel="icon" href="icon/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="icon/favicon-48.png" sizes="48x48">
+    <link rel="icon" href="icon/favicon-64.png" sizes="64x64">
+    <link rel="icon" href="icon/favicon-128.png" sizes="128x128">
+
+    <!-- 웹 폰트 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+
+
+    <!-- HTLM5shiv ie6~8 -->
+    <!--[if lt IE 9]> 
+        <script src="js/html5shiv.min.js"></script>
+        <script type="text/javascript">
+            alert("현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!");
+        </script>
+    <![endif]-->
+    <style>
+        /* style */
+        /* 레이아웃 */
+
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {}
+
+        #header {
+            background: url(img/header_bg.jpg) repeat-x center top;
+        }
+
+        #nav {
+            background-color: #f3f4ed;
+        }
+
+        #title {
+            background-color: #d2e6c9;
+        }
+
+        #contents .container {
+            border-right: 1px solid #a2b29f;
+            border-left: 1px solid #a2b29f;
+        }
+
+        #cont_left {
+            float: left;
+            width: 250px;
+        }
+
+        #cont_center {
+            overflow: hidden;
+            margin-right: 250px;
+            min-height: 1800px;
+            border-right: 1px solid #a2b29f;
+            border-left: 1px solid #a2b29f;
+            background-color: #d2e6c962;
+        }
+
+        #cont_right {
+            position: absolute;
+            right: 0;
+            top: 0px;
+            width: 250px;
+            height: 100%;
+        }
+
+        #footer {
+            border-top: 1px solid #a2b29f;
+            background: #d2e6c9;
+        }
+
+        /* 컨테이너 */
+        .container {
+            position: relative;
+            width: 1500px;
+            margin: 0 auto;
+
+        }
+
+        /* 헤더 */
+        .header {
+            height: 400px;
+        }
+
+        .header .header_menu {
+            text-align: right;
+        }
+
+        .header .header_menu a {
+            color: #fff;
+            padding: 8px 0 6px 10px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .header .header_menu a:hover {
+            color: #f2b4b4;
+        }
+
+        .header .header_tit {
+            text-align: center;
+            /* text-transform: uppercase; */
+            margin-top: 90px;
+        }
+
+        .header .header_tit h1 {
+            font-size: 80px;
+            color: #fff;
+            font-family: 'Knewave', cursive;
+            display: inline-block;
+            padding: 5px 30px 5px 30px;
+            letter-spacing: 2px;
+            transition: box-shadow 0.5s ease-in-out;
+        }
+
+        .header .header_tit h1:hover {
+            box-shadow:
+                inset -9em 0 0 0 rgb(83, 126, 101),
+                inset 9em 0 0 0 #000;
+        }
+
+        .header .header_tit a {
+            font-size: 15px;
+            color: #fff;
+            /* background: #4a9abf; */
+            display: inline-block;
+            padding: 10px 20px 10px 20px;
+            transition: box-shadow 0.3s ease-in-out;
+            letter-spacing: 3px;
+            margin-top: -20px;
+        }
+
+        .header .header_tit a:hover {
+            box-shadow:
+                0 0 0 4px #d2e6c9 inset,
+                0 0 0 100px rgba(0, 0, 0, 0.1) inset;
+        }
+
+        .header .header_icon {
+            text-align: center;
+            margin-top: 30px;
+            padding-bottom: 45px;
+        }
+
+        .header .header_icon li {
+            display: inline;
+            margin: 0 3px;
+        }
+
+        .header .header_icon li a {
+            position: relative;
+            background-color: #d2e6c9;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            color: #464f41;
+            display: inline-block;
+            font-size: 25px;
+            line-height: 45px;
+            transition: all 0.3s ease;
+        }
+
+        .header .header_icon li a span {
+            position: absolute;
+            opacity: 0;
+            left: 50%;
+            top: -30px;
+            transform: translateX(-50%);
+            font-size: 12px;
+            line-height: 1.6;
+            background: #d2e6c9;
+            padding: 3px 9px;
+            border-radius: 6px 0;
+            transition: all 0.3s ease;
+        }
+
+        .header .header_icon li a span:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            margin-left: -5px;
+            border-top: 5px solid #d2e6c9;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+        }
+
+        .header .header_icon li a:hover span {
+            opacity: 1;
+            top: -33px;
+        }
+
+        .header .header_icon li a:hover {
+            box-shadow:
+                0 0 0 3px #bdd2b6 inset,
+                0 0 0 100px rgba(0, 0, 0, 0.1) inset;
+        }
+
+        /* 전체 메뉴 */
+        .nav {
+            overflow: hidden;
+            padding: 25px 0;
+            display: none;
+        }
+
+        .nav>div {
+            float: left;
+            width: 40%;
+        }
+
+        .nav>div:last-child {
+            width: 20%;
+        }
+
+        .nav>div ol {
+            overflow: hidden;
+        }
+
+        .nav>div li {
+            float: left;
+            width: 50%;
+            position: relative;
+            padding-left: 8px;
+            box-sizing: border-box;
+        }
+
+        .nav>div:last-child li {
+            width: 100%;
+        }
+
+        .nav>div li a {
+            position: relative;
+        }
+
+        .nav>div li:before {
+            content: '';
+            width: 3px;
+            height: 3px;
+            background-color: #bdd2b6;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+
+        .nav>div h3 {
+            font-size: 18px;
+            color: #464f41;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .nav>div li a:after {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #bdd2b6;
+            transition: all .2s ease-out;
+        }
+
+        .nav>div li:hover a:after {
+            width: 100%;
+        }
+
+        /* 타이틀 */
+        .title {
+            position: relative;
+            text-align: center;
+        }
+
+        .title h2 {
+            font-family: 'GmarketSansMedium';
+            font-size: 20px;
+            color: #464f41;
+            padding: 5px 0;
+        }
+
+        .title .btn {
+            position: absolute;
+            right: 0;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            background: #fff;
+            color: #798777;
+            font-size: 20px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .title .btn:hover {
+            box-shadow:
+                0 0 0 100px rgb(87, 126, 92) inset,
+                0 0 0 100px rgba(0, 0, 0, 0.1) inset;
+            color: #fff;
+        }
+
+        .title .h:hover {
+            color: #b98585;
+        }
+
+        /* 컨텐츠 영역 */
+        .column {
+            padding: 15px;
+            border-bottom: 1px solid #a2b29f;
+        }
+
+        .column .col_tit {
+            font-size: 20px;
+            color: #464f41;
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .column .col_desc {
+            border-bottom: 1px dashed #f8ede3;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            color: #000;
+            line-height: 18px;
+        }
+
+        .column.col1 {
+            background: #ffe9e9;
+        }
+
+        .column.col2 {
+            background: #fcf2f2;
+        }
+
+        .column.col3 {
+            border-bottom: 0;
+        }
+
+        .column.col4 {}
+
+        .column.col5 {}
+
+        .column.col6 {
+            border-bottom: 0;
+        }
+
+        .column.col7 {}
+
+        .column.col8 {}
+
+        .column.col9 {}
+
+        .column.col10 {
+            border-bottom: 0;
+
+        }
+
+        /* 메뉴 */
+        .menu li {
+            position: relative;
+        }
+
+        .menu li a {
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #464f41;
+            border-bottom: 1px solid #d2e6c9;
+            padding: 10px;
+            display: block;
+            transition: box-shadow 0.5s ease-in, background 0.5s ease-in;
+        }
+
+        .menu li a i {
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            color: #f2b4b4;
+        }
+
+        .menu li a:hover {
+            box-shadow: inset 180px 0 0 0 #d2e6c9;
+            color: #464f41;
+            background: #fff;
+        }
+
+        /* 게시판1 */
+        .notice1 {
+            position: relative;
+        }
+
+        .notice1 h5 {
+            font-size: 14px;
+            color: #464f41;
+            padding-bottom: 5px;
+        }
+
+        .notice1 li {
+            position: relative;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-left: 8px;
+        }
+
+        .notice1 li:before {
+            content: '';
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #464f41;
+            position: absolute;
+            left: 0;
+            top: 6px;
+        }
+
+        .notice1 .more {
+            position: absolute;
+            right: 0;
+            top: 3px;
+            color: #a2b29f;
+            text-transform: uppercase;
+            font-size: 10px;
+        }
+
+        /* 게시판2 */
+        .notice2 {
+            position: relative;
+        }
+
+        .notice2 h5 {
+            font-size: 14px;
+            color: #464f41;
+            padding-bottom: 5px;
+        }
+
+        .notice2 li {
+            position: relative;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            padding-left: 8px;
+            padding-bottom: 5px;
+            max-height: 40px;
+            /* ie */
+        }
+
+        .notice2 li:before {
+            content: '';
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #464f41;
+            position: absolute;
+            left: 0;
+            top: 6px;
+        }
+
+        .notice2 .more {
+            position: absolute;
+            right: 0;
+            top: 3px;
+            color: #a2b29f;
+            text-transform: uppercase;
+            font-size: 10px;
+        }
+
+        /* 블로그1 */
+        .blog1 img {
+            width: 100%;
+        }
+
+        .blog1 .img-retina {
+            display: none;
+        }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 1.5dppx) {
+            .blog1 .img-retina {
+                display: initial;
+            }
+
+            .blog1 .img-normal {
+                display: none;
+            }
+        }
+
+        /* 블로그2 */
+
+
+        .blog2 h5 {
+            color: #fff;
+            text-align: center;
+            padding: 30px 30px;
+            text-transform: uppercase;
+        }
+
+        .blog2 p {
+            padding-top: 5px;
+        }
+
+        .blog2 .img-retina {
+            background-image: url(img/blog3_@3.jpg);
+            background-size: cover;
+            height: 150px;
+
+        }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 1.5dppx) {
+            .blog2 .img-retina {
+                background-image: url(img/blog3_@3.jpg);
+            }
+        }
+
+        /* 이미지 슬라이드 */
+        .slider figure {
+            position: relative;
+        }
+
+        .slider figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .slider figcaption em {
+            display: block;
+            font-weight: bold;
+            font-size: 28px;
+            text-transform: uppercase;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all .84s ease;
+        }
+
+        .slider figcaption span {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all .84s 0.2s ease;
+        }
+
+        .slider .slick-active figcaption em {
+            opacity: 1;
+            transform: translateX(0)
+        }
+
+        .slider .slick-active figcaption span {
+            opacity: 1;
+            transform: translateX(0)
+        }
+
+        .slider .slick-dots {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .slider .slick-dots li {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin: 5px;
+        }
+
+        .slider .slick-dots li button {
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+            background: #bfcba8;
+            border-radius: 50%;
+        }
+
+        .slider .slick-dots li.slick-active button {
+            background: #464f41;
+        }
+
+        .slider .slick-prev {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1000;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            text-indent: -9999px;
+        }
+
+        button {
+            background: none;
+        }
+
+        .slider .slick-prev::before {
+            content: "\f053";
+            color: #bfcba8;
+            text-indent: 0;
+            position: absolute;
+            left: 9px;
+            top: 8px;
+        }
+
+        .slider .slick-next {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1000;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            text-indent: -9999px;
+        }
+
+        .slider .slick-next::before {
+            content: "\f054";
+            color: #bfcba8;
+            text-indent: 0;
+            position: absolute;
+            left: 11px;
+            top: 8px;
+        }
+
+        /* 라이트 박스 */
+        .square a {
+            float: left;
+            width: 19%;
+            margin: 0.5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .square a img {
+            width: 100%;
+            display: block;
+        }
+
+        .square a em {
+            background: rgba(0, 0, 0, 0.77);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            bottom: -30px;
+            opacity: 1;
+            transition: all .3s ease;
+        }
+
+        .square a:hover em {
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.57);
+        }
+
+        .square a:nth-child(1):hover img {
+            filter: blur(2px);
+        }
+
+        .square a:nth-child(2):hover img {
+            filter: brightness(50%);
+        }
+
+        .square a:nth-child(3):hover img {
+            filter: contrast(10%);
+        }
+
+        .square a:nth-child(4):hover img {
+            filter: grayscale(100%);
+        }
+
+        .square a:nth-child(5):hover img {
+            filter: hue-rotate(120deg);
+        }
+
+        .square a:nth-child(6):hover img {
+            filter: invert(100%);
+        }
+
+        .square a:nth-child(7):hover img {
+            filter: opacity(10%);
+        }
+
+        .square a:nth-child(8):hover img {
+            filter: saturate(10%);
+        }
+
+        .square a:nth-child(9):hover img {
+            filter: sepia(120%);
+        }
+
+        .square a:nth-child(10):hover img {
+            filter: sepia(120%) hue-rotate(120deg);
+        }
+
+        /* 비디오 */
+        .video {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+        }
+
+        .video iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 푸터 */
+        .footer {
+            text-align: center;
+            padding: 30px 50px;
+        }
+
+        .footer li {
+            position: relative;
+            display: inline;
+            padding: 0 7px 0 10px;
+            white-space: nowrap;
+        }
+
+        .footer li:before {
+            content: '';
+            width: 1px;
+            height: 12px;
+            background-color: #a2b29f;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        .footer li:first-child:before {
+            width: 0;
+        }
+
+        .footer address {
+            padding-top: 15px;
+        }
+
+        /* 사이드 이펙트1 */
+        .side1 {
+            position: relative;
+            display: block;
+            perspective: 600px;
+        }
+
+        .side1 .front {
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            transition: all 0.5s ease-in-out;
+            backface-visibility: hidden;
+        }
+
+        .side1 .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transform-style: preserve-3d;
+            color: #fff;
+            background: #5b8a72;
+            text-align: center;
+            transform: rotateY(-180deg);
+            transition: all 0.5s ease-in-out;
+            backface-visibility: hidden;
+        }
+
+        .side1 .back i {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .side1:hover .front {
+            transform: rotateY(180deg);
+        }
+
+        .side1:hover .back {
+            transform: rotateY(0deg);
+            z-index: 1;
+        }
+
+        /* 사이드 이펙트2 */
+        .column.col8 {
+            background: #ffe9e9;
+        }
+
+        .column.col9 {
+            background: #fcf2f2;
+        }
+
+        .side2 {
+            position: relative;
+            display: block;
+            perspective: 600px;
+
+        }
+
+        .side2 .front {
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            transition: all 0.5s ease-in-out;
+            backface-visibility: hidden;
+        }
+
+        .side2 .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transform-style: preserve-3d;
+            transform: rotateY(-180deg);
+            transition: all 0.5s ease-in-out;
+            backface-visibility: hidden;
+        }
+
+        .side2 .front figcaption {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) translateZ(100px);
+            display: block;
+            text-align: center;
+        }
+
+        .side2 .back figcaption {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) translateZ(100px);
+            color: #fff;
+            font-size: 20px;
+            display: block;
+            text-align: center;
+        }
+
+        .side2 figcaption {
+            width: 60%;
+        }
+
+        .side2 figcaption h3 {
+            color: #464f41;
+            font-size: 20px;
+            font-weight: bold;
+            background: #d2e6c9;
+            padding: 3px 10px;
+        }
+
+        .side2 figcaption p {
+            font-size: 14px;
+        }
+
+        .side2:hover .front {
+            transform: rotateY(180deg);
+        }
+
+        .side2:hover .back {
+            transform: rotateY(0deg);
+            z-index: 1;
+        }
+
+        /* 사이드 이펙트3 */
+        .side3 {
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .side3 figcaption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            transform: translate(350%, -50%) rotate(180deg);
+        }
+
+        .side3 figcaption:after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            background: #f2b4b4;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+
+        .side3 figcaption h3 {
+            font-size: 16px;
+        }
+
+        .side3 figcaption em {
+            display: block;
+            font-weight: bold;
+        }
+
+        .side3 img {
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .side3:hover img {
+            opacity: 0.4;
+        }
+
+        .side3:hover figcaption {
+            transform: translate(-50%, -50%) rotate(0deg);
+            opacity: 1;
+        }
+
+        /* 사이드 이펙트3 */
+        .side4 {
+            position: relative;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .side4 figcaption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            transform: translate(350%, -50%) rotate(180deg);
+        }
+
+        .side4 figcaption:after {
+
+            content: '';
+            border-top: 100px solid #464f41;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+
+
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+
+        .side4 figcaption h3 {
+            font-size: 16px;
+            margin-top: -40px;
+        }
+
+        .side4 figcaption em {
+            display: block;
+            font-weight: bold;
+        }
+
+        .side4 img {
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .side4:hover img {
+            opacity: 0.4;
+        }
+
+        .side4:hover figcaption {
+            transform: translate(-50%, -50%) rotate(0deg);
+            opacity: 1;
+        }
+
+
+        /* mediaquery */
+        /* 화면 너비 0~1220px */
+        @media (max-width: 1220px) {
+            .container {
+                width: 100%;
+            }
+
+            .row {
+                padding: 0 15px;
+            }
+
+            #cont_center {}
+
+            #contents .container {
+                border: 0;
+            }
+
+            .title .btn {
+                right: 15px;
+            }
+
+            .square a {
+                width: 24%
+            }
+
+            .square a:nth-child(5n) {
+                display: none;
+            }
+        }
+
+        /* 화면 너비 0~1024px */
+        @media (max-width: 1024px) {
+            .square a {
+                width: 32.33333%
+            }
+
+            .square a:nth-child(5) {
+                display: block;
+            }
+        }
+
+        /* 화면 너비 0~960px */
+        @media (max-width: 960px) {
+            #cont_right {
+                position: static;
+                width: 100%;
+                border-top: 1px solid #a2b29f;
+            }
+
+            #cont_center {
+                margin-right: 0;
+                border-right: 0;
+            }
+
+            .nav>div {
+                float: none;
+                width: 100%;
+            }
+
+            .nav>div:last-child {
+                width: 100%;
+            }
+
+            .nav>div li {
+                width: 33.333%;
+            }
+
+            .nav>div:last-child li {
+                width: 33.333%;
+            }
+
+            .nav>div ol {
+                margin-bottom: 10px;
+            }
+
+            #cont_right {
+                overflow: hidden;
+            }
+
+            #cont_right .column {
+                float: left;
+                width: 33.333%;
+                box-sizing: border-box;
+            }
+
+            #cont_right .column.col7 {
+                border-right: 1px solid #a2b29f;
+                border-bottom: 0;
+            }
+
+            #cont_right .column.col8 {
+                border-right: 1px solid #a2b29f;
+                border-bottom: 0;
+            }
+
+            #cont_right .column.col9 {
+                border-right: 1px solid #a2b29f;
+                border-bottom: 0;
+            }
+
+            #cont_right .column.col10 {}
+        }
+
+        /* 화면 너비 0~768px */
+        @media (max-width: 768px) {
+
+            #cont_left {
+                float: none;
+                width: 100%;
+            }
+
+            #cont_center {
+                border-left: 0;
+                min-height: 1500px;
+            }
+
+            #cont_right .column.col10 {
+                display: none;
+            }
+        }
+
+        /* 화면 너비 0~600px */
+        @media (max-width: 600px) {
+
+            .header {
+                height: 300px;
+                background-image: url('img/header_bg_m.jpg');
+                background-size: cover;
+                width: 100%;
+            }
+
+            #cont_center {
+                min-height: 1300px;
+            }
+
+            .row {
+                padding: 0;
+            }
+
+            .nav>div li {
+                width: 50%;
+            }
+
+            .header .header_menu a {
+                padding: 8px;
+            }
+
+            .nav>div:last-child li {
+                width: 50%;
+            }
+
+            .header .header_tit {
+                margin-top: 20px;
+            }
+
+            .header .header_icon {}
+
+            .title .btn {}
+
+            .column.col1 .col_tit {
+                display: none;
+            }
+
+            .column.col1 .col_desc {
+                display: none;
+            }
+
+            .column.col1 .menu li a i {
+                display: none;
+            }
+
+            .column.col1 {
+                padding: 0;
+                border-bottom: 0;
+                background: #464f41;
+            }
+
+            .column.col1 .menu ul {
+                overflow: hidden;
+            }
+
+            .column.col1 .menu li {
+                float: left;
+                width: 33.33333%;
+                text-align: center;
+                border-right: 1px solid #a2b29f;
+                box-sizing: border-box;
+            }
+
+            .column.col1 .menu li:nth-child(3n) {
+                border-right: 0;
+            }
+
+            .column.col1 .menu li a {
+                color: #fff;
+
+            }
+
+            .column.col1 .menu li a:hover {
+                box-shadow: none;
+                background: rgba(36, 130, 174, 0.3);
+            }
+
+            .column.col2 {
+                background: #fff;
+            }
+
+            .column.col4 {
+                border-top: 1px solid #a2b29f;
+            }
+
+            #cont_right .column {
+                width: 50%;
+            }
+
+            #cont_right .column.col8 {
+                border-right: 0;
+            }
+
+            #cont_right .column.col9 {}
+
+            .slider figcaption {
+                padding: 10px;
+            }
+
+            .slider figcaption em {
+                font-size: 18px;
+            }
+
+            .slider figcaption span {
+                font-size: 14px;
+            }
+
+            .square a {
+                width: 49%
+            }
+
+            .square a:nth-child(5) {
+                display: none;
+            }
+
+            #cont_right .column.col10,
+            #cont_right .column.col9 {
+                display: inline-block;
+            }
+        }
+
+        /* 화면 너비 0~480px */
+        @media (max-width: 480px) {}
+
+        /* 화면 너비 0~320px */
+        @media (max-width: 320px) {
+            #cont_right .column {
+                width: 100%;
+            }
+
+            #cont_right .column.col7 {
+                border-right: 0;
+                border-bottom: 1px solid #a2b29f;
+            }
+
+            .square a {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header">
+                    <div class="header_menu">
+                        <a href="https://blog.naver.com/PostList.nhn?blogId=meltingbrush">Blog</a>
+                        <a href="https://www.instagram.com/bbaek0/">Instagram</a>
+                        <a href="#"
+                            onclick="document.querySelector('.header').style.backgroundColor='rgba(0, 0, 0, 0.5)';">black</a>
+                    </div>
+                    <!-- //header_menu -->
+                    <div class="header_tit">
+                        <h1>Artlab</h1><br>
+                        <a href="http://webstoryboy.co.kr">artlab.co.kr</a>
+                    </div>
+                    <!-- //header_tit -->
+                    <div class="header_icon">
+                        <ul>
+                            <li><a href="https://blog.naver.com/PostList.nhn?blogId=meltingbrush"><i
+                                        class="fa fa-comments" aria-hidden="true"></i><span>kakao</span></a></li>
+                            <li><a href="https://blog.naver.com/PostList.nhn?blogId=meltingbrush"><i
+                                        class="fa fa-youtube" aria-hidden="true"></i><span>youtube</span></a>
+                            </li>
+                            <li><a href="https://www.instagram.com/bbaek0/" class="facebook"><i class="fa fa-instagram"
+                                        aria-hidden="true"></i><span>instagram</span></a></li>
+                            <li><a href="tel:01056571222" class="twitter"><i class="fa fa-volume-control-phone"
+                                        aria-hidden="true"></i><span>call</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- //header_icon -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- //nav -->
+
+    <nav id="nav">
+        <div class="container">
+            <div class="row">
+                <div class="nav">
+                    <h2 class="ir_su">전체 메뉴</h2>
+                    <div>
+                        <h3>초등부</h3>
+                        <ol>
+                            <li><a href="#">HTML 태그(Tag)</a></li>
+                            <li><a href="#">블록 요소/인라인 요소</a></li>
+                            <li><a href="#">DTD 선언</a></li>
+                            <li><a href="#">언어 속성 설정</a></li>
+                            <li><a href="#">HTML &lt;title&gt;</a></li>
+                            <li><a href="#">HTML &lt;meta&gt;</a></li>
+                            <li><a href="#">특수문자</a></li>
+                            <li><a href="#">하이퍼 링크</a></li>
+                            <li><a href="#">HTML &lt;style&gt;</a></li>
+                            <li><a href="#">HTML &lt;html&gt;</a></li>
+                            <li><a href="#">HTML &lt;head&gt;</a></li>
+                            <li><a href="#">HTML &lt;div&gt;</a></li>
+                            <li><a href="#">HTML &lt;colgroup&gt;</a></li>
+                            <li><a href="#">HTML &lt;caption&gt;</a></li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3>중등부</h3>
+                        <ol>
+                            <li><a href="#">CSS 선택자</a></li>
+                            <li><a href="#">CSS 단위</a></li>
+                            <li><a href="#">CSS 색상</a></li>
+                            <li><a href="#">CSS 선언 방법</a></li>
+                            <li><a href="#">상대주소와 절대주소</a></li>
+                            <li><a href="#">CSS float</a></li>
+                            <li><a href="#">이미지 표현 방법</a></li>
+                            <li><a href="#">이미지 스프라이트</a></li>
+                            <li><a href="#">IR 효과</a></li>
+                            <li><a href="#">이미지 최적화</a></li>
+                            <li><a href="#">background-color</a></li>
+                            <li><a href="#">border-style</a></li>
+                            <li><a href="#">font-size</a></li>
+                            <li><a href="#">text-align</a></li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3>성인/취미</h3>
+                        <ol>
+                            <li><a href="#">반응형사이트</a></li>
+                            <li><a href="#">미디어쿼리</a></li>
+                            <li><a href="#">CSS3</a></li>
+                            <li><a href="#">웹 접근성 연구소</a></li>
+                            <li><a href="#">네이버 널리</a></li>
+                            <li><a href="#">다음 다룸</a></li>
+                            <li><a href="#">Webstandard</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- //nav -->
+
+    <article id="title">
+        <div class="container">
+            <div class="title">
+                <h2 class="pt10 h">CURRICULUM</h2>
+                <a href="#" class="btn"><i class="fa fa-angle-down" aria-hidden="true"></i><span class="ir_su">전체메뉴
+                        보기</span></a>
+            </div>
+        </div>
+    </article>
+    <!-- //title -->
+
+    <main>
+        <section id="contents">
+            <div class="container">
+                <h2 class="ir_su">반응형 사이트 컨텐츠</h2>
+                <section id="cont_left">
+                    <h3 class="ir_su">메뉴 및 게시판 컨텐츠 영역</h3>
+                    <article class="column col1">
+                        <h4 class="col_tit">클래스</h4>
+                        <p class="col_desc"> 아트랩과 함께 자존감과 소통능력을 키워,
+                            우리아이의 심리를 지키는 면역력을 길러보세요!</p>
+                        <!-- 메뉴 -->
+                        <div class="menu">
+                            <ul>
+                                <li><a href="https://blog.naver.com/meltingbrush">유치부 <i class="fa fa-paper-plane-o"
+                                            aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://blog.naver.com/meltingbrush">초등부 <i class="fa fa-paper-plane-o"
+                                            aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://blog.naver.com/meltingbrush">중등부 <i class="fa fa-paper-plane-o"
+                                            aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://blog.naver.com/meltingbrush">입시반 <i class="fa fa-paper-plane-o"
+                                            aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://blog.naver.com/meltingbrush">취미반 <i class="fa fa-paper-plane-o"
+                                            aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://blog.naver.com/meltingbrush">심리치료 <i class="fa fa-paper-plane-o"
+                                            aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--//메뉴 -->
+                    </article>
+                    <!-- //col1 -->
+
+                    <article class="column col2">
+                        <h4 class="col_tit">Notice</h4>
+                        <p class="col_desc">아이가 혼자서도 할 수 있는 미술 활동입니다.
+                            감정과 자아를 찾아 자존감을 형성까지!</p>
+                        <!-- 게시판 -->
+                        <div class="notice1">
+                            <h5>Notice1</h5>
+                            <ul>
+                                <li><a href="#">이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄
+                                        효과입니다. 이 줄은 한줄 효과입니다.</a></li>
+                                <li><a href="#">이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄
+                                        효과입니다. 이 줄은 한줄 효과입니다.</a></li>
+                                <li><a href="#">이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄
+                                        효과입니다. 이 줄은 한줄 효과입니다.</a></li>
+                                <li><a href="#">이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄
+                                        효과입니다. 이 줄은 한줄 효과입니다.</a></li>
+                            </ul>
+                            <a href="#" class="more" title="더 보기">More <i class="fa fa-plus-circle"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                        <!--//게시판 -->
+                        <!-- 게시판2 -->
+                        <div class="notice2 mt15">
+                            <h5>Notice2</h5>
+                            <ul>
+                                <li><a href="#">이 줄은 두줄 효과입니다. 이 줄은 두줄 효과입니다. 이 줄은 두줄 효과입니다. 이 줄은 두줄 효과입니다. 이 줄은 한줄
+                                        효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다.</a></li>
+                                <li><a href="#">이 줄은 두줄 효과입니다. 이 줄은 두줄 효과입니다. 이 줄은 두줄 효과입니다. 이 줄은 두줄 효과입니다. 이 줄은 한줄
+                                        효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다. 이 줄은 한줄 효과입니다.</a></li>
+                            </ul>
+                            <a href="#" class="more" title="더 보기">More <i class="fa fa-plus-circle"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                        <!--//게시판2 -->
+                    </article>
+                    <!-- //col2 -->
+
+                    <article class="column col3">
+                        <h4 class="col_tit">Blog</h4>
+                        <p class="col_desc">부모님과 아이가 함께 하는 미술 활동입니다.
+                            미술 창의력 뿐만 아니라 소통능력까지!</p>
+                        <!-- blog -->
+                        <div class="blog1">
+                            <h5 class="ir_su">Image1</h5>
+                            <figure>
+                                <img src="img/blog4_@3.jpg" class="img-normal" alt="normal image">
+                                <img src="img/blog4_@3.jpg" class="img-retina" alt="retina image">
+                                <figcaption>아트랩이 제공하는 수업은 평면조형에서 입체조형 및 드로잉 수업을 단계별로 제공합니다. 또한 초등교과 과정에서의 미술프로그램을 제공하여
+                                    미술수업을 리드할 수 있는 능력을 만들어 나갑니다.
+                                    <br> 아트랩의 미술 수업은 재미있고 창의적인 소재와 프리미엄급 북유럽의 미술 교재 및 재료로 아이들이 미술에 대한 흥미를 이끌어 낼 수 있는
+                                    체험놀이로 구성되어 있습니다.
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <!--//blog -->
+                        <!-- blog2 -->
+                        <div class="blog2 mt15">
+                            <div class="img-retina">
+                                <h5>Image2</h5>
+                            </div>
+                            <p>부모님과 아이가 함께 하는 미술 활동
+                                패키지 구매 시, 25% 할인가 적용 </p>
+                        </div>
+                        <!--//blog2 -->
+                        <!-- blog -->
+                        <div class="blog1 mt15">
+                            <h5 class="ir_su">Image1</h5>
+                            <figure>
+                                <img src="img/blog5_@3.jpg" class="img-normal" alt="normal image">
+                                <img src="img/blog5_@3.jpg" class="img-retina" alt="retina image">
+                                <figcaption>아이들의 창의력, 상상력을 그림에 표현하고 감정을 이끌어 내고 호응하는 전과정의 감성 아동놀이미술 프로그램을 제공합니다.
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <!--//blog -->
+                    </article>
+                    <!-- //col3 -->
+                </section>
+                <!-- //cont_left -->
+
+                <section id="cont_center">
+                    <h3 class="ir_su">나는 오늘도 미술관에서 그림공부한다.</h3>
+                    <article class="column col4">
+                        <h4 class="col_tit">창의력, 상상력을 그림에</h4>
+                        <p class="col_desc">아이가 사고해 나가는 과정을 관찰하고 , 발상을 그림으로 이해하여 표현하고, 결과에 대해 생각하여 말할 수 있도록 만드는 것. 아트랩이
+                            제안하는 미술교육은 아이의 감정을 끌어낼 수 있도록 체험하고 이야기 할 수 있는 것. 그것이 아트랩의 미술교육 철학입니다.</p>
+                        <!-- 이미지 슬라이드 -->
+                        <div class="slider">
+                            <div>
+                                <figure>
+                                    <img src="img/slider001.jpg" alt="이미지1">
+                                    <figcaption><em>교과미술 IN-CLASS</em><span>초등교육과정의 내용들을 중심으로 아이들의 창의성과 감성을 일깨우기 위한
+                                            CREATIVE POGRAME을 제공합니다.</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <img src="img/slider002.jpg" alt="이미지2">
+                                    <figcaption><em>드로잉 UPPER CLASS</em><span>감성놀이미술에서 한단계 깊은 프로그램으로 아이가 사고해 나가는 과정과 발상을
+                                            그림으로 표현할 수 있는 심화 드로잉 교육 프로그램을 제공합니다.</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <img src="img/slider003.jpg" alt="이미지3">
+                                    <figcaption><em>키즈아트 클래스</em><span>어린이들의 감성발달은 물론, 직관력과 관찰력 그리고 상황에 대한 이해력과 논리적 사고력을
+                                            기를 수 있는 놀이미술과 아트 프로젝트로 수업을 진행합니다.</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <!--//이미지 슬라이드 -->
+                    </article>
+                    <!-- //col4 -->
+
+                    <article class="column col5">
+                        <h4 class="col_tit">키즈아트 클래스</h4>
+                        <p class="col_desc">홍익대학교 출신 미술 강사들이 연구 개발한 학습자료와 북유럽의 미술교재와 교구를 통해 아이들의 창의력을 끌어내는 감성교육 프로그램을
+                            제공합니다.</p>
+                        <!-- lightbox -->
+                        <div class="lightbox square clearfix">
+                            <a href="img/light01_s.jpg"><img src="img/light01.jpg" alt="이미지"><em>blur</em></a>
+                            <a href="img/light02_s.jpg"><img src="img/light02.jpg" alt="이미지"><em>brightness</em></a>
+                            <a href="img/light03_s.jpg"><img src="img/light03.jpg" alt="이미지"><em>contrast</em></a>
+                            <a href="img/light04_s.jpg"><img src="img/light04.jpg" alt="이미지"><em>grayscale</em></a>
+                            <a href="img/light05_s.jpg"><img src="img/light05.jpg" alt="이미지"><em>hue-rotate</em></a>
+                            <a href="img/light06_s.jpg"><img src="img/light06.jpg" alt="이미지"><em>invert</em></a>
+                            <a href="img/light07_s.jpg"><img src="img/light07.jpg" alt="이미지"><em>opacity</em></a>
+                            <a href="img/light08_s.jpg"><img src="img/light08.jpg" alt="이미지"><em>saturate</em></a>
+                            <a href="img/light09_s.jpg"><img src="img/light09.jpg" alt="이미지"><em>sepia</em></a>
+                            <a href="img/light10_s.jpg"><img src="img/light10.jpg" alt="이미지"><em>Mix</em></a>
+                        </div>
+                        <!--//lightbox -->
+                    </article>
+                    <!-- //col5 -->
+
+                    <article class="column col6">
+                        <h4 class="col_tit">Video</h4>
+                        <p class="col_desc">내 아이의 잠재력,
+                            아트랩 FREE CLASS에서 찾아보세요!</p>
+                        <!-- video -->
+                        <!-- <video autoplay="autoplay" controls="controls" loop="loop">
+							<source src="img/video.mp4" type="video/mp4">
+						</video> -->
+                        <div class="video">
+                            <iframe src="https://www.youtube.com/embed/i9iEXvk92Cc" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <!--//video -->
+                    </article>
+                    <!-- //col6 -->
+                </section>
+                <!-- //cont_center -->
+                <section id="cont_right">
+                    <h3 class="ir_su">반응형 사이트 오른쪽 컨텐츠</h3>
+                    <article class="column col7">
+                        <h4 class="col_tit">Effect1</h4>
+                        <p class="col_desc">아이들의 감정을 읽는것이 프로그램의 시작입니다.</p>
+                        <!-- side1 -->
+                        <div class="side1">
+                            <figure class="front">
+                                <img src="img/side1.jpg" alt="이미지2">
+                            </figure>
+                            <div class="back">
+                                <i class="fa fa-heart fa-4x" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <!-- side1//-->
+                    </article>
+                    <!-- //col7 -->
+
+                    <article class="column col8">
+                        <h4 class="col_tit">Effect2</h4>
+                        <p class="col_desc">READING CHILDREN'S FEELINGS</p>
+                        <!-- side2 -->
+                        <div class="side2">
+                            <figure class="front">
+                                <img src="img/side2.jpg" alt="이미지2">
+                                <figcaption>
+                                    <h3>Hover Effect</h3>
+                                </figcaption>
+                            </figure>
+                            <figure class="back">
+                                <img src="img/side4.jpg" alt="이미지2">
+                                <figcaption>
+                                    <h3>Hover Effect</h3>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <!-- side2//-->
+                    </article>
+                    <!-- //col8 -->
+
+                    <article class="column col9">
+                        <h4 class="col_tit">Effect4</h4>
+                        <p class="col_desc">과정을 관찰하고 발상을 그림으로 이해하여 표현하고 결과에 대해
+                            생각하며 말할 수 있도록</p>
+                        <!-- side3 -->
+                        <div class="side3">
+                            <figure>
+                                <img src="img/side3.jpg" alt="이미지3">
+                                <figcaption>
+                                    <h3>Hover<em>Effect</em></h3>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <!-- side3//-->
+                    </article>
+                    <!-- //col9 -->
+
+                    <article class="column col10">
+                        <h4 class="col_tit">Effect4</h4>
+                        <p class="col_desc">상황에 대한 이해력과 논리적 사고력을 기를 수 있는 놀이미술</p>
+                        <!-- side4 -->
+                        <div class="side4">
+                            <figure>
+                                <img src="img/side5.jpg" alt="이미지3">
+                                <figcaption>
+                                    <h3>Hover<em>Effect</em></h3>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <!-- side4//-->
+                    </article>
+                    <!-- //col10 -->
+                </section>
+                <!-- //cont_right -->
+            </div>
+        </section>
+        <!-- //contents -->
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer">
+                    <ul>
+                        <li><a href="#">클래스 오시는길</a></li>
+                        <li><a href="#">이용금액</a></li>
+                        <li><a href="#">blog</a></li>
+                        <li><a href="#"><strong>개인정보취급방침</strong></a></li>
+                        <li><a href="#">사업자 617-555-1234</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                    <address>
+                        Copyright &copy;
+                        <a href="http://webstoryboy.co.kr"><strong>eunb</strong></a>
+                        All Rights Reserved.
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- JavaScript Libraries -->
+    <script src="js/jquery.min_1.12.4.js"></script>
+    <script src="js/modernizr-custom.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/lightgallery.min.js"></script>
+    <script>
+        //접기/펼치기
+        $(".btn").click(function (e) {
+            e.preventDefault();
+            $(".nav").slideToggle();
+            $(".btn").toggleClass("open");
+
+            //var btn = $(".btn").find(">i").attr("class");
+            //alert(btn);
+
+            if ($(".btn").hasClass("open")) {
+                //open이 있을 때
+                $(".btn").find(">i").attr("class", "fa fa-angle-up");
+            } else {
+                //open이 없을 때
+                $(".btn").find(">i").attr("class", "fa fa-angle-down");
+            }
+        });
+
+
+        $(".h").click(function (e) {
+            e.preventDefault();
+            $(".nav").slideToggle();
+            $(".h").toggleClass("open");
+
+        });
+
+        $(window).resize(function () {
+            var wWidth = $(window).width();
+            if (wWidth > 600) {
+                $(".nav").removeAttr("style");
+            }
+        });
+
+        //라이트 박스
+        $(".lightbox").lightGallery({
+            thumbnail: true,
+            autoplay: true,
+            pause: 3000,
+            progressBar: true
+        });
+
+        //이미지 슬라이더
+        $(".slider").slick({
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        autoplay: false,
+                    }
+                }
+            ]
+        });
+
+        //sns 공유하기
+        $(".facebook").click(function (e) {
+            e.preventDefault();
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.title), 'facebooksharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
+        });
+        $(".twitter").click(function (e) {
+            e.preventDefault();
+            window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' + encodeURIComponent(document.URL) + '%20-%20' + encodeURIComponent(document.title), 'twittersharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
+        });
+    </script>
+</body>
+
+</html>
