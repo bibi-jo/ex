@@ -12,6 +12,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap"
         rel="stylesheet">
+
+    <script src="js/html5shiv.min.js"></script>
+    <script type="text/javascript"></script>
     <style>
         body {
             margin: 0;
@@ -169,6 +172,11 @@
 
 
         @media(max-width:1000px) {
+
+            main {
+                padding: 0 15px 10px 15px;
+            }
+
             .content1 {
                 flex-direction: column;
             }
@@ -178,7 +186,7 @@
                 border: none;
                 flex-basis: auto;
                 text-align: center;
-                padding: 20px;
+                padding: 0px;
             }
 
             nav .onoff_btn {
@@ -206,8 +214,18 @@
             .left-font {
                 display: block;
                 width: 100%;
-                padding-bottom: 20px;
+                overflow: hidden;
             }
+
+            .botom-5 {
+                margin: -20px 0px;
+            }
+
+            .botom-5 h3 {
+                font-size: 2em;
+                margin-bottom: 0;
+            }
+
         }
 
         img {
@@ -416,6 +434,8 @@
                 padding-left: 3%;
                 padding-right: 3%;
             }
+
+
         }
 
         footer {
@@ -485,7 +505,7 @@
 
                     <div class="botom-5">
                         <img src="./img/10.jpg" class="left-img">
-                        <h3 class="right-font m-pt-5">quisquam magnam</h3>
+                        <h3 class="right-font">quisquam magnam</h3>
                         <p class="right-font"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora
                             molestias,
                             qui unde vero enim odit at
@@ -497,7 +517,7 @@
                     </div>
                     <div class="botom-5">
                         <img src="./img/11.jpg" class="right-img">
-                        <h3 class="left-font m-pt-5">quisquam magnam</h3>
+                        <h3 class="left-font">quisquam magnam</h3>
                         <p class="left-font">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident dolores
                             saepe adipiscillum reiciendis quisquam magnam eaque, ab debitis vitae iste animi est
                             voluptallum reiciendis quisquam magnam eaque, ab debitis vitae iste animi est voluptallum
