@@ -1,1 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #f5eee6;
+            margin: 0%;
+            font-family: 'Playfair Display', serif;
+            line-height: 150%;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .image01 {
+            background-image: url('02.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .basic-image {
+            width: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+        }
+
+        .line {
+            border-top: 5px solid black;
+
+        }
+
+
+
+        .accordion a {
+            position: relative;
+            display: flex;
+            padding: 1rem;
+            font-size: 1.15rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .accordion a:hover,
+        .accordion a:hover::after {
+            cursor: pointer;
+            color: #ff5353;
+        }
+
+
+        .accordion a.active {
+            color: #ff5353;
+            border-bottom: 1px solid #ff5353;
+        }
+
+        .accordion a::after {
+            font-family: 'Ionicons';
+            content: '\f218';
+            position: absolute;
+            float: right;
+            right: 1rem;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .accordion a.active::after {
+            font-family: 'Ionicons';
+            content: '\f209';
+            color: #ff5353;
+
+        }
+
+        .accordion .content {
+            opacity: 0;
+            padding: 0 1rem;
+            max-height: 0;
+            border-bottom: 1px solid #e5e5e5;
+            overflow: hidden;
+            clear: both;
+            -webkit-transition: all 0.2s ease 0.15s;
+            -o-transition: all 0.2s ease 0.15s;
+            transition: all 0.2s ease 0.15s;
+        }
+
+        .accordion .content.active {
+            opacity: 1;
+            padding: 1rem;
+            max-height: 100%;
+            -webkit-transition: all 0.35s ease 0.15s;
+            -o-transition: all 0.35s ease 0.15s;
+            transition: all 0.35s ease 0.15s;
+        }
+
+        @media (min-width:800px) {
+
+            /* nav */
+            #nav {
+                font-family: 'Playfair Display', serif;
+                font-size: 20px;
+                position: fixed;
+                width: 150px;
+                margin: 0% 3%;
+            }
+
+            #nav:hover {
+                background-color: white;
+
+            }
+
+            ul {
+                padding: 30px 15px;
+
+            }
+
+            li {
+                list-style: none;
+                margin: 3px;
+                padding: 0px 10px;
+            }
+
+            .logo {
+                width: 100px;
+            }
+
+            /* main */
+            #main {
+                position: absolute;
+                padding: 30px;
+                left: 150px;
+                margin-left: 3%;
+            }
+
+
+            .title h1 {
+                font-size: 3rem;
+                margin: 5%;
+                padding: 1% 0%;
+                border-top: 1px solid black;
+            }
+
+            .title p {
+                margin: 5% 5% -5% 5%;
+                font-size: 0.9rem;
+            }
+
+            .section {
+                display: flex;
+                flex-direction: row;
+                margin: 5%;
+                column-gap: 20px;
+
+            }
+
+            .center {
+                margin: 25vh auto 0;
+                transform: translateY(-50%);
+            }
+
+            .item1 {
+                flex-grow: 1;
+                flex-basis: 300px;
+            }
+
+            .item1-2 {
+                flex-grow: 1;
+                flex-basis: 300px;
+                background-color: white;
+                text-align: center;
+                height: 50vh;
+            }
+
+            .item2 {
+                flex-grow: 2;
+                flex-basis: 400px;
+            }
+
+            .item3 {
+                flex-grow: 3;
+                flex-basis: 500px;
+            }
+
+            .item4 {
+                flex-grow: 4;
+                flex-basis: 700px;
+            }
+
+            .item5 {
+                flex-grow: 5;
+                flex-basis: 1200px;
+            }
+
+
+
+
+
+            /* footer */
+            footer {}
+
+        }
+
+        @media (max-width:799px) {
+
+            #nav {
+                font-family: 'Playfair Display', serif;
+                font-size: 15px;
+                position: fixed !important;
+                width: 100%;
+                margin: -30% 0% 0%;
+                background-color: white;
+            }
+
+            #nav:hover {
+                background-color: white;
+            }
+
+            ul {
+                margin: 2%;
+                padding: 10px;
+            }
+
+            li {
+                list-style: none;
+                display: inline;
+                margin-right: 4%;
+            }
+
+            .logo {
+                width: 80px;
+                display: block;
+            }
+
+            #main {
+                position: flex;
+                padding: 5%;
+                margin-top: 100px;
+            }
+
+
+
+            .title h1 {
+                font-size: 3rem;
+                padding-top: 5%;
+                border-top: 1px solid black;
+            }
+
+            .title p {
+                margin-bottom: -5%;
+                font-size: 0.9rem;
+            }
+
+            .section {
+                display: block;
+            }
+
+            .basic-image {
+                margin: 0%;
+            }
+
+            .item1,
+            .item2,
+            .item3,
+            .item4,
+            .item5,
+            .item1-2 {
+                display: inline-block;
+                margin: 5% 0%;
+            }
+
+            .accordion a {
+                position: relative;
+                display: flex;
+                padding: 1rem;
+                font-size: 0.8rem;
+                border-bottom: 1px solid #e5e5e5;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="nav">
+        <ul>
+            <img src="img/logo.png" class="logo">
+            <li><a href="#interior">Interior</a></li>
+            <li><a href="#design">Design</a></li>
+            <li><a href="#board">board</a></li>
+            <li><a href="#concep">Concep</a></li>
+        </ul>
+    </div>
+
+
+    <div id="main">
+        <div id="interior">
+            <div class="title">
+                <p>Lorem ipsum</p>
+                <h1>Interior</h1>
+            </div>
+            <div class="section">
+                <div class="item1" style="background-image: url('02.jpg');">Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Quis cumque ipsam magnam
+                    tenetur, ipsa quos cupiditate incidunt aliquam voluptas temporibus harum sunt corporis placeat
+                    sapiente
+                    est blanditiis voluptates libero vero.</div>
+            </div>
+            <div class="section">
+                <div class="item1"><img src="img/02.jpg" class="basic-image"></div>
+
+            </div>
+            <div class="section">
+                <div class="item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cumque ipsam magnam
+                    tenetur, ipsa quos cupiditate incidunt aliquam voluptas temporibus harum sunt corporis placeat
+                    sapiente
+                    est blanditiis voluptates libero vero.</div>
+                <div class="item2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi molestiae ea ab nobis
+                    culpa ut fugiat possimus cumque dolore quod? Voluptates, consectetur alias beatae sed corporis sequi
+                    hic
+                    voluptatem quaerat.</div>
+            </div>
+            <div class="section">
+                <div class="item1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cumque ipsam magnam
+                    tenetur, ipsa quos cupiditate incidunt aliquam voluptas temporibus harum sunt corporis placeat
+                    sapiente
+                    est blanditiis voluptates libero vero.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+                    cumque ipsam magnam
+                    tenetur, ipsa quos cupiditate incidunt aliquam voluptas temporibus harum sunt corporis placeat
+                    sapiente
+                    est blanditiis voluptates libero vero.</div>
+                <div class="item3"><img src="img/05.jpg" class="basic-image"></div>
+                <div class="item1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cumque ipsam magnam
+                    tenetur, ipsa quos cupiditate incidunt aliquam voluptas temporibus harum sunt corporis placeat
+                    sapiente
+                    est blanditiis voluptates libero vero.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+                    cumque ipsam magnam
+                    tenetur, ipsa quos cupiditate incidunt aliquam voluptas temporibus harum sunt corporis placeat
+                    sapiente
+                    est blanditiis voluptates libero vero.</div>
+            </div>
+        </div>
+        <div id="design">
+            <div class="title">
+                <p>Lorem ipsum</p>
+                <h1>Design</h1>
+            </div>
+            <div class="section">
+                <div class="item1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cumque ipsam magnam
+                    tenetur, ipsa quos cupiditate incidunt aliquam voluptas temporibus harum sunt corporis placeat
+                    sapiente
+                    est blanditiis voluptates libero vero.</div>
+                <div class="item5"><img src="img/01.jpg" class="basic-image"></div>
+            </div>
+            <div class="title">
+                <p>Lorem ipsum</p>
+                <h1>board</h1>
+            </div>
+            <div class="section">
+                <div class="item5"><img src="img/07.png" class="basic-image"></div>
+                <div class="item1-2">
+                    <p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cumque ipsam
+                        magnam
+                        tenetur, ipsa quos cupiditate incidunt aliquam voluptas temporibus harum sunt corporis placeat
+                        sapiente
+                        est blanditiis voluptates libero vero.</p>
+                </div>
+            </div>
+        </div>
+        <div id="board">
+            <div class="title">
+                <p>Lorem ipsum</p>
+                <h1>board</h1>
+            </div>
+            <div class="section">
+                <div class="item1"><img src="img/01.jpg" class="basic-image">
+                    <p class="line">ipsacupiditate quos cupiditate incidunt
+                        aliquam</p>
+                </div>
+                <div class="item3"><img src="img/04.jpg" class="basic-image"></div>
+                <div class="item1"><img src="img/02.jpg" class="basic-image">
+                    <p class="line">ipiditatpiditatpiditatpsacupiditate quos cupiditate incidunt
+                        aliquam</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cumque ipsam magnam
+                    tenetur, ipsa quos cupiditate incidunt aliquam voluptas temporibus harum sunt corporis placeat
+                    sapiente
+                    est blanditiis voluptates libero vero.</div>
+                <div class="item2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi molestiae ea ab nobis
+                    culpa ut fugiat possimus cumque dolore quod? Voluptates, consectetur alias beatae sed corporis sequi
+                    hic
+                    voluptatem quaerat.</div>
+            </div>
+        </div>
+        <div id="concep">
+            <div class="title">
+                <p>Lorem ipsum</p>
+                <h1>Concep</h1>
+            </div>
+            <div class="section">
+                <div class="item1">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <a>What can JavaScript Do?</a>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut
+                                    labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+                                    pretium
+                                    viverra suspendisse potenti.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <a>Is FAQ Section Matters In Website?</a>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut
+                                    labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+                                    pretium
+                                    viverra suspendisse potenti.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <a>How To Create a Light FAQ Element?</a>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut
+                                    labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+                                    pretium
+                                    viverra suspendisse potenti.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const items = document.querySelectorAll(".accordion a");
+        function toggleAccordion() {
+            this.classList.toggle('active');
+            this.nextElementSibling.classList.toggle('active');
+        }
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+    </script>
+
+</body>
+
+</html>
