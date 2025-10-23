@@ -1,8 +1,5 @@
 
- <style>
-
-
-       @font-face {
+   @font-face {
     font-family: 'Sweet';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Light.woff2') format('woff2');
     font-weight: 500;
@@ -295,4 +292,4 @@
                 border-bottom: 1px solid #e5e5e5;
             }
         }
-    </style>
+
