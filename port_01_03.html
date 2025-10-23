@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+    <link rel='stylesheet' href="css/eunb.css">
+    <title>Eun B</title>
+ 
+</head>
+
+<body>
+
+
+    <div id="nav">
+        <ul>
+           <a href="https://bibi-jo.github.io/ex/port01.html"> <img src="img/logo.png" class="logo"></a>
+            <li><a href="https://bibi-jo.github.io/ex/port01.html">About</a></li>
+            <li><a href="https://bibi-jo.github.io/ex/port01_01.html">Pastry</a></li>
+            <li><a href="https://bibi-jo.github.io/ex/port01_02.html">Bread</a></li>
+            <li><a href="https://bibi-jo.github.io/ex/port01_03.html">Rice Cake</a></li>
+        </ul>
+    </div>
+
+
+    <div id="main">
+        
+        <div id="design">
+            <div class="title">
+                <p>Lorem ipsum</p>
+                <h1>Design</h1>
+            </div>
+            <div class="section">
+                <div class="item1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cumque ipsam magnam
+                    tenetur, ipsa quos cupiditate incidunt aliquam voluptas temporibus harum sunt corporis placeat
+                    sapiente
+                    est blanditiis voluptates libero vero.</div>
+                <div class="item5"><img src="img/01.jpg" class="basic-image"></div>
+            </div>
+            <div class="title">
+                <p>Lorem ipsum</p>
+                <h1>board</h1>
+            </div>
+            <div class="section">
+                <div class="item5"><img src="img/07.png" class="basic-image"></div>
+                <div class="item1-2">
+                    <p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cumque ipsam
+                        magnam
+                        tenetur, ipsa quos cupiditate incidunt aliquam voluptas temporibus harum sunt corporis placeat
+                        sapiente
+                        est blanditiis voluptates libero vero.</p>
+                </div>
+            </div>
+        </div>
+        <div id="board">
+            <div class="title">
+                <p>Lorem ipsum</p>
+                <h1>board</h1>
+            </div>
+            <div class="section">
+                <div class="item1"><img src="img/01.jpg" class="basic-image">
+                    <p class="line">ipsacupiditate quos cupiditate incidunt
+                        aliquam</p>
+                </div>
+                <div class="item3"><img src="img/04.png" class="basic-image"></div>
+                <div class="item1"><img src="img/02.jpg" class="basic-image">
+                    <p class="line">ipiditatpiditatpiditatpsacupiditate quos cupiditate incidunt
+                        aliquam</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="item3"><img src="img/04.png" class="basic-image">
+                    <p class="line">ipsacupiditate quos cupiditate incidunt
+                        aliquam</p>
+                </div>
+                <div class="item1"><img src="img/br02.jpg" class="basic-image"></div>
+                <div class="item1"><img src="img/br01.jpg" class="basic-image">
+                    <p class="line">ipiditatpiditatpiditatpsacupiditate quos cupiditate incidunt
+                        aliquam</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="item4"><img src="img/01.jpg" class="basic-image">
+                    <p class="line">ipsacupiditate quos cupiditate incidunt
+                        aliquam</p>
+                </div>
+               
+                <div class="item2"><h5>마이큐는 지난 18일부터 서울 강남대로 이길이구갤러리에서 개인전 '사이, 흔적(Traces in Between)'을 열고 있다. 최근 아이즈매거진과의 인터뷰에서는 "아이슬란드 여행에서 많은 영감을 받았다"며 작품의 배경을 설명하기도 했다.</h5></div>
+            </div>
+        </div>
+
+
+        
+        </div>
+    </div>
+
+    <script>
+
+        const items = document.querySelectorAll(".accordion a");
+        function toggleAccordion() {
+            this.classList.toggle('active');
+            this.nextElementSibling.classList.toggle('active');
+        }
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+    </script>
+
+</body>
+
+
+</html>
