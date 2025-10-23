@@ -103,8 +103,8 @@
             -o-transition: all 0.35s ease 0.15s;
             transition: all 0.35s ease 0.15s;
         }
-            h5 {margin:0;
-    font-family: 'Sweet';
+            h5 {margin-top:0;margin-bottom:50px;
+               font-family: 'Sweet';
                font-size: 15px;line-height: 1.5;
             }
    
