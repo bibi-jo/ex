@@ -270,6 +270,16 @@
 
         @media (max-width:799px) {
 
+
+   .container{
+   width:100%;
+   height:200px;
+    animation-name: back_change;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+          
             #nav {
                 font-family: 'Playfair Display', serif;
                 font-size: 15px;
@@ -295,8 +305,10 @@
             }
 
             .logo {
-                width: 80px;
-                display: block;
+                font-size:30px;
+                margin: 0%;
+                font-family: "Miss Fajardose", cursive;
+                font-weight: 400;
             }
 
             #main {
