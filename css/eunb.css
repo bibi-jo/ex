@@ -21,28 +21,28 @@
 }
 
 @keyframes back_change{
-    0% {background:url(main01.jpg);
+    0% {background:url("../img/main01.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    16% {background:url(main02.jpg);
+    16% {background:url("../img/main02.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    32% {background:url(main03.jpg);
+    32% {background:url("../img/main03.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
    
-    48% {background:url(main01.jpg);
+    48% {background:url("../img/main01.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    64% {background:url(main02.jpg);
+    64% {background:url("../img/main02.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    100% {background:url(main03.jpg);
+    100% {background:url("../img/main03.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
