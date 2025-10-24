@@ -180,7 +180,10 @@
             }
 
             .logo {
-                width: 100px;
+               font-size:20px;
+               width: 100px;
+               font-weight: 400;
+               font-family: "Kapakana", cursive;
             }
 
             /* main */
