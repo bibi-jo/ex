@@ -17,8 +17,7 @@
   position: relative;
   overflow: hidden;
   
-  width: 600px;
-  height: 400px;
+  width: 100%;
 }
 
 .slide {
@@ -34,15 +33,15 @@
 }
 
 .slide:nth-child(1) {
-  background-image: url(img1.jpg);
+  background-image: url('ex/img/main01.jpg');
   animation-delay: 0;
 }
 .slide:nth-child(2) {
-  background-image: url(img2.jpg);
+  background-image: url('ex/img/main02.jpg');
   animation-delay: -2.5s;
 }
 .slide:nth-child(3) {
-  background-image: url(img3.jpg);
+  background-image: url('ex/img/main03.jpg');
   animation-delay: -5s;
 }
 
