@@ -14,6 +14,8 @@
 
         }
 .container{
+   width:100%;
+   heiht:1500px;
     animation-name: back_change;
     animation-duration: 100s;
     animation-iteration-count: infinite;
