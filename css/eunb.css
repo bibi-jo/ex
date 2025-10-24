@@ -17,7 +17,7 @@
    width:100%;
    height:500px;
     animation-name: back_change;
-    animation-duration: 100s;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
 }
