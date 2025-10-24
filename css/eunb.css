@@ -155,11 +155,22 @@
         @media (min-width:800px) {
 
             /* nav */
+
+
+           .logo {
+               font-size:90px;
+                margin: 60% 0%;
+                font-family: "Miss Fajardose", cursive;
+                font-weight: 400;
+            }
+
+
+          
             #nav {
                 font-family: 'Playfair Display', serif;
                 font-size: 20px;
                 position: fixed;
-                width: 150px;
+                width: 160px;
                 margin: 0% 3%;
             }
 
@@ -179,12 +190,7 @@
                 padding: 0px 10px;
             }
 
-            .logo {
-               font-size:90px;
-                margin: -60% 0%;
-                font-family: "Miss Fajardose", cursive;
-                font-weight: 400;
-            }
+         
 
             /* main */
             #main {
