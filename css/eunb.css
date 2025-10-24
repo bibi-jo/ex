@@ -1,4 +1,4 @@
-
+  @import url('https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&family=Miss+Fajardose&display=swap');
    @font-face {
     font-family: 'Sweet';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Light.woff2') format('woff2');
@@ -180,10 +180,10 @@
             }
 
             .logo {
-               font-size:20px;
-               width: 100px;
-               font-weight: 400;
-               font-family: "Kapakana", cursive;
+               font-size:70px;
+              
+                font-family: "Miss Fajardose", cursive;
+                font-weight: 400;
             }
 
             /* main */
