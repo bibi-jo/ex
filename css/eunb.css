@@ -84,7 +84,7 @@
 
         .line {
             border-top: 5px solid black;
-          margin-bottom:10px;
+          padding-bottom:10px;
 
         }
 
@@ -238,6 +238,8 @@
                 background-color: white;
                 text-align: center;
                 height: 100%;
+               padding: 10px;
+
             }
 
             .item2 {
