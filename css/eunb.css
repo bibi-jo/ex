@@ -179,7 +179,7 @@ h4 {margin-top:0;margin-bottom:50px;
               letter-spacing:-1px;
             }
 
-.logo2 {font-family: 'Playfair Display', serif;}
+.logo2 {font-family: 'Playfair Display', serif;white-space: nowrap;}
           
             #nav {
                 font-family: 'Playfair Display', serif;
