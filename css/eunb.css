@@ -1,8 +1,6 @@
 
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap" rel="stylesheet">
+
 
 @import url('https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&family=Miss+Fajardose&display=swap');
    @font-face {
@@ -180,7 +178,7 @@ h4 {margin-top:0;margin-bottom:50px;
   font-style: normal;
             }
 
-
+.logo2 {font-family: 'Playfair Display', serif;}
           
             #nav {
                 font-family: 'Playfair Display', serif;
