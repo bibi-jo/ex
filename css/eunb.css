@@ -294,6 +294,11 @@ h4 {margin-top:0;margin-bottom:50px;
                font-size: 13px;line-height: 1.4;
             }
 
+h6 {margin-top:10px;margin-bottom:30px;
+               font-family: 'Jeju Myeongjo', serif;
+               font-size: 13px;line-height: 1.4;
+            }
+           
    .container{
       
         margin-top: 50px;
