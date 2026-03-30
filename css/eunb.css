@@ -171,15 +171,15 @@ h4 {margin-top:0;margin-bottom:50px;
 
 
            .logo {
-               font-size:50px;
+               font-size:70px;
                 margin: 20% 0%;
                 font-family: "Mr De Haviland", cursive;
                font-weight: 400;
               font-style: normal;
-              letter-spacing:-1px;
+              letter-spacing:-6px;
             }
 
-.logo2 {font-family: 'Playfair Display', serif;white-space: nowrap;}
+.logo2 {font-family: 'Playfair Display', serif;white-space: nowrap; font-size:40px;}
           
             #nav {
                 font-family: 'Playfair Display', serif;
@@ -324,12 +324,8 @@ h4 {margin-top:0;margin-bottom:50px;
             .logo {
                 font-size:50px;
                 margin: 5%;
-              padding:5%
-               font-family: "Mr De Haviland", cursive;
-               font-weight: 400;
-              font-style: normal;
-            }
-
+              padding:5%}
+.logo2 { font-size:30px;}
             #main {
                 position: flex;
                 padding: 5%;
