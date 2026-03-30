@@ -5,13 +5,13 @@
     font-weight: 500;
     font-display: swap;
 }
-
 @font-face {
-    font-family: 'YesMyungjo';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff') format('woff');
+    font-family: 'Gimje';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/GIMJE.woff2') format('woff2');
     font-weight: normal;
     font-display: swap;
 }
+
 
         body {
             background-color: #f5eee6;
@@ -156,12 +156,12 @@
         }
 
 h4 {margin-top:0;margin-bottom:50px;
-               font-family: 'YesMyungjo';
-               font-size: 18px;line-height: 1.5;
+               font-family: 'Gimje';
+               font-size: 18px;line-height: 1.5;letter-spacing: -1px;
             }
             h5 {margin-top:0;margin-bottom:50px;
-               font-family: 'YesMyungjo';
-               font-size: 15px;line-height: 1.5;
+               font-family: 'Gimje';
+               font-size: 15px;line-height: 1.5;letter-spacing: -1px;
             }
    
 
