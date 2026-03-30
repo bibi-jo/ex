@@ -286,12 +286,12 @@ h4 {margin-top:0;margin-bottom:50px;
         }
 
         @media (max-width:799px) {
-h4 {
-               font-size: 15px;line-height: 1.2;
+            h4 {
+               font-size: 15px;line-height: 1.4;
             }
-            h5 {margin-top:0;margin-bottom:30px;
+            h5 {margin-top:10px;margin-bottom:-30px;
                font-family: 'Jeju Myeongjo', serif;
-               font-size: 13px;line-height: 1.2;
+               font-size: 13px;line-height: 1.4;
             }
 
    .container{
