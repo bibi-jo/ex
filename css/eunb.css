@@ -158,7 +158,7 @@
 
 h4 {margin-top:0;margin-bottom:50px;
               font-family: "Noto Sans KR", sans-serif;
-              font-size: 18px;line-height: 1.5;font-weight: 300;
+              font-size: 18px;line-height: 1.5;font-weight: 500;
             }
             h5 {margin-top:0;margin-bottom:50px;
                font-family: "Noto Sans KR", sans-serif;
@@ -173,7 +173,7 @@ h4 {margin-top:0;margin-bottom:50px;
 
            .logo {
                font-size:70px;
-                margin: 20% 0%;
+                margin: 20% 0% 40% 0%;
                 font-family: "Mr De Haviland", cursive;
                font-weight: 400;
               font-style: normal;
@@ -291,7 +291,7 @@ h4 {margin-top:0;margin-bottom:50px;
                font-size: 15px;line-height: 1.4;
             }
             h5 {margin-top:10px;margin-bottom:-30px;
-               font-family: "Noto Sans KR", sans-serif; font-weight: 300;
+               font-family: "Noto Sans KR", sans-serif; font-weight: 400;
                font-size: 13px;line-height: 1.4;
             }
 
@@ -299,7 +299,7 @@ h4 {margin-top:0;margin-bottom:50px;
 
 h6 {margin-top:10px;margin-bottom:30px;
                font-family: "Noto Sans KR", sans-serif;
-               font-size: 13px;line-height: 1.4;font-weight: 300;
+               font-size: 13px;line-height: 1.4;font-weight: 400;
             }
            
    .container{
