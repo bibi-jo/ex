@@ -169,6 +169,7 @@ h7 {margin-top:0;margin-bottom:50px;
                font-family: "Noto Sans KR", sans-serif;
                font-size: 15px;line-height: 1.5;font-weight: 400;
             }
+
         @media (min-width:800px) {
 
             /* nav */
@@ -262,7 +263,7 @@ h7 {margin-top:0;margin-bottom:50px;
 
             .item2 {
                 flex-grow: 2;
-                flex-basis: 400px;
+                
             }
 
             .item3 {
