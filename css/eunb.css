@@ -1,6 +1,7 @@
 
 
 
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
 
 @import url('https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&family=Miss+Fajardose&display=swap');
    @font-face {
@@ -30,7 +31,7 @@
 }
 
 @keyframes back_change{
-    0% {background:url("../img/main01.jpg");
+   20% {background:url("../img/main01.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
@@ -43,11 +44,11 @@
         background-size: cover;
         background-position: center;}
    
-    48% {background:url("../img/main01.jpg");
+    68% {background:url("../img/main01.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    64% {background:url("../img/main02.jpg");
+    84% {background:url("../img/main02.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
@@ -156,12 +157,12 @@
         }
 
 h4 {margin-top:0;margin-bottom:50px;
-               font-family: 'Jeju Myeongjo', serif;
-               font-size: 18px;line-height: 1.5;
+              font-family: "Noto Sans KR", sans-serif;
+              font-size: 18px;line-height: 1.5;font-weight: 300;
             }
             h5 {margin-top:0;margin-bottom:50px;
-               font-family: 'Jeju Myeongjo', serif;
-               font-size: 15px;line-height: 1.5;
+               font-family: "Noto Sans KR", sans-serif;
+               font-size: 15px;line-height: 1.5;font-weight: 400;
             }
    
 
@@ -179,7 +180,7 @@ h4 {margin-top:0;margin-bottom:50px;
               letter-spacing:-6px;
             }
 
-.logo2 {font-family: 'Playfair Display', serif;white-space: nowrap; font-size:40px;}
+.logo2 {font-family: 'Playfair Display', serif;white-space: nowrap; font-size:37px;}
           
             #nav {
                 font-family: 'Playfair Display', serif;
@@ -201,8 +202,8 @@ h4 {margin-top:0;margin-bottom:50px;
 
             li {
                 list-style: none;
-                margin: 3px;
-                padding: 0px 10px;
+                margin: 5px;
+                padding: 5px 10px;
             }
 
          
@@ -290,13 +291,15 @@ h4 {margin-top:0;margin-bottom:50px;
                font-size: 15px;line-height: 1.4;
             }
             h5 {margin-top:10px;margin-bottom:-30px;
-               font-family: 'Jeju Myeongjo', serif;
+               font-family: "Noto Sans KR", sans-serif; font-weight: 300;
                font-size: 13px;line-height: 1.4;
             }
 
+
+
 h6 {margin-top:10px;margin-bottom:30px;
-               font-family: 'Jeju Myeongjo', serif;
-               font-size: 13px;line-height: 1.4;
+               font-family: "Noto Sans KR", sans-serif;
+               font-size: 13px;line-height: 1.4;font-weight: 300;
             }
            
    .container{
@@ -335,7 +338,7 @@ h6 {margin-top:10px;margin-bottom:30px;
             }
 
          .logo {
-               font-size:50px;
+               font-size:45px;
                 margin: 10% 0% 4%;
                 font-family: "Mr De Haviland", cursive;
                font-weight: 400;
@@ -343,7 +346,7 @@ h6 {margin-top:10px;margin-bottom:30px;
               letter-spacing:-5px;
             }
 
-.logo2 {font-family: 'Playfair Display', serif;white-space: nowrap; font-size:30px;}
+.logo2 {font-family: 'Playfair Display', serif;white-space: nowrap; font-size:23px;}
           
             #main {
                 position: flex;
