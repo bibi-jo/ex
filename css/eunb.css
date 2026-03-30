@@ -1,4 +1,10 @@
-  @import url('https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&family=Miss+Fajardose&display=swap');
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap" rel="stylesheet">
+
+@import url('https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&family=Miss+Fajardose&display=swap');
    @font-face {
     font-family: 'Sweet';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Light.woff2') format('woff2');
@@ -167,10 +173,11 @@ h4 {margin-top:0;margin-bottom:50px;
 
 
            .logo {
-               font-size:90px;
-                margin: 60% 0%;
-                font-family: "Miss Fajardose", cursive;
-                font-weight: 400;
+               font-size:50px;
+                margin: 20% 0%;
+                font-family: "Mr De Haviland", cursive;
+  font-weight: 400;
+  font-style: normal;
             }
 
 
@@ -316,11 +323,12 @@ h4 {margin-top:0;margin-bottom:50px;
             }
 
             .logo {
-              heith:200px;
                 font-size:50px;
-                margin: 0%;
-                font-family: "Miss Fajardose", cursive;
-                font-weight: 400;
+                margin: 5%;
+              padding:5%
+               font-family: "Mr De Haviland", cursive;
+               font-weight: 400;
+              font-style: normal;
             }
 
             #main {
