@@ -22,8 +22,8 @@
 
         }
 .container{
-   width:100%;    position: relative;
-
+   width:100%;    
+   z-index:1;
    height:500px;justify-content: center;
     animation-name: back_change;
     animation-duration: 20s;
@@ -234,6 +234,7 @@ h7 {margin-top:0;margin-bottom:50px;
                 position: fixed;
                 width: 160px;
                 margin: 0% 3%;
+                z-index:99999;
             }
 
             #nav:hover {
@@ -381,6 +382,7 @@ h6 {margin-top:10px;margin-bottom:30px;
                 width: 100%;
                 margin: -30% 0% 0%;
                 background-color: white;
+                  z-index:99999;
             }
 
             #nav:hover {
