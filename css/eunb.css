@@ -15,7 +15,7 @@
 
 
         body {
-            background-color: #f5eee6;
+            background-color: #efe8cd;
             margin: 0%;
             font-family: 'Playfair Display', serif;
             line-height: 150%;
@@ -130,7 +130,7 @@
             display: flex;
             padding: 1rem;
             font-size: 1.1rem;
-            border-bottom: 1px solid #e5e5e5;
+            border-bottom: 1px solid #000;
         }
 
         .accordion a:hover,
@@ -158,7 +158,7 @@
         .accordion a.active::after {
             font-family: 'Ionicons';
             content: '\f209';
-            color: #ff5353;
+            color: #727D73;
 
         }
 
