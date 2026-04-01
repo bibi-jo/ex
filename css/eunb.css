@@ -75,11 +75,11 @@ text-align: center;
                     
 }
 @keyframes back_change2{
-   25% {background:url("../img/n01.png");
+   25% {background:url("../img/n03.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    35% {background:url("../img/n01.png");
+    35% {background:url("../img/n03.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
@@ -92,11 +92,11 @@ text-align: center;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    84% {background:url("../img/n03.png");
+    84% {background:url("../img/n01.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    100% {background:url("../img/n03.png");
+    100% {background:url("../img/n01.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
