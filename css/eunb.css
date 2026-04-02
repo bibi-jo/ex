@@ -34,11 +34,11 @@ letter-spacing: -0.01em;
 }
 
 @keyframes back_change{
-   25% {background:url("../img/a01.png");
+   25% {background:url("../img/a02.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    35% {background:url("../img/a02.png");
+    35% {background:url("../img/a01.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
