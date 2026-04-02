@@ -28,7 +28,7 @@ letter-spacing: -0.01em;
    height:700px;
    justify-content: center;
     animation-name: back_change;
-    animation-duration: 10s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
 }
@@ -38,11 +38,11 @@ letter-spacing: -0.01em;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    35% {background:url("../img/a01.png");
+    35% {background:url("../img/a02.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    42% {background:url("../img/a02.png");
+    42% {background:url("../img/a03.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
@@ -51,7 +51,7 @@ letter-spacing: -0.01em;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    84% {background:url("../img/a03.png");
+    84% {background:url("../img/a01.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
@@ -65,7 +65,7 @@ letter-spacing: -0.01em;
   width:100%; height:700px;
    justify-content: center;
     animation-name: back_change2;
-    animation-duration: 10s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
 }
