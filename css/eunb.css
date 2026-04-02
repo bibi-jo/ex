@@ -27,7 +27,7 @@
    height:700px;
    justify-content: center;
     animation-name: back_change;
-    animation-duration: 15;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
 }
