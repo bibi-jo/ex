@@ -340,7 +340,7 @@ h7 {margin-top:0;margin-bottom:50px;
         @media (max-width:799px) {
 
 
-           .mt-50 {margin-top: -50px;}
+           .mt-30 {margin-top: -30px;}
       
             h4 {
                font-size: 15px;line-height: 1.4;
@@ -438,8 +438,8 @@ h6 {margin-top:10px;margin-bottom:30px;
                 font-size: 0.9rem;
             }
 
-            .section {overflow:auto;
-                display: block;margin:0;
+            .section {
+                display: block;
             }
 
             .basic-image {
@@ -453,7 +453,7 @@ h6 {margin-top:10px;margin-bottom:30px;
             .item5,
             .item1-2 {
                 display: inline-block;
-                margin: 5% 0%;
+                margin: 3% 0%;
             }
 
             .accordion a {
