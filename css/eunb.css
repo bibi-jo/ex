@@ -155,7 +155,7 @@ text-align: center;
         .accordion a:hover,
         .accordion a:hover::after {
             cursor: pointer;
-            color: #ff5353;
+            color: #AF3E3E;
         }
 
 
