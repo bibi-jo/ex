@@ -53,7 +53,7 @@ background-image:url("../img/a03.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    90% {background:url("../img/a01.png");
+    90% {background:url("../img/a03.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
@@ -88,15 +88,15 @@ text-align: center;
         background-position: center;}
    
    
-    68% {background:url("../img/n01.png");
+  58% {background:url("../img/n03.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    84% {background:url("../img/n02.png");
+    74% {background:url("../img/n01.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    100% {background:url("../img/n01.png");
+    90% {background:url("../img/n02.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
