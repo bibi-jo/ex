@@ -24,7 +24,7 @@ letter-spacing: -0.01em;
         }
 .container{ position: relative;   z-index:1;
    width:100%;    
-
+background-image:url("../img/a01.png");
    height:700px;
    justify-content: center;
     animation-name: back_change;
