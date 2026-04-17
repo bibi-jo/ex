@@ -39,10 +39,7 @@ background-image:url("../img/a01.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    35% {background:url("../img/a01.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;}
+  
     42% {background:url("../img/a03.png");
         background-repeat: no-repeat;
         background-size: cover;
@@ -52,7 +49,7 @@ background-image:url("../img/a01.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    74% {background:url("../img/a01.png");
+    74% {background:url("../img/a03.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
