@@ -24,7 +24,7 @@ letter-spacing: -0.01em;
         }
 .container{ position: relative;   z-index:1;
    width:100%;    
-background-image:url("../img/a01.png");
+background-image:url("../img/a03.png");
    height:700px;
    justify-content: center;
     animation-name: back_change;
@@ -35,32 +35,32 @@ background-image:url("../img/a01.png");
 }
 
 @keyframes back_change{
-   25% {background:url("../img/a02.png");
+   25% {background:url("../img/a01.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
   
-    42% {background:url("../img/a03.png");
+    42% {background:url("../img/a02.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
    
-    55% {background:url("../img/a02.png");
+    55% {background:url("../img/a01.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    74% {background:url("../img/a03.png");
+    74% {background:url("../img/a02.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    90% {background:url("../img/a03.png");
+    90% {background:url("../img/a01.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
                     
 }
 .container2{    position: relative;   z-index:1;
-            background-image:url("../img/n01.png");
+            background-image:url("../img/n03.png");
   width:100%; height:700px;
    justify-content: center;
     animation-name: back_change2;
@@ -78,7 +78,7 @@ text-align: center;
     transform: translateX(-50%) translateY(-50%);}
 
 @keyframes back_change2{
-   25% {background:url("../img/n03.png");
+   25% {background:url("../img/n01.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
@@ -88,7 +88,7 @@ text-align: center;
         background-position: center;}
    
    
-    68% {background:url("../img/n03.png");
+    68% {background:url("../img/n01.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
@@ -96,7 +96,7 @@ text-align: center;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    100% {background:url("../img/n03.png");
+    100% {background:url("../img/n01.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
